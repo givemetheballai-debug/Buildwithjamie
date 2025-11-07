@@ -70,7 +70,7 @@ export default function Resources() {
               </ul>
             </div>
 
-            <a href="/AI_Context_Template___updated.docx" download style={{display: 'inline-block', background: '#3498db', color: 'white', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: '600', marginTop: '1rem'}}>
+            <a href="/Jamies_AI_Context_Template.docx" download style={{display: 'inline-block', background: '#3498db', color: 'white', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: '600', marginTop: '1rem'}}>
               Download Template
             </a>
           </div>
