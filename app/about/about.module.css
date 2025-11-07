@@ -1,0 +1,70 @@
+.pageHeader {
+  padding: 8rem 2rem 4rem;
+  text-align: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.pageHeader h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.pageHeader p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+.story {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #4a5568;
+}
+
+.story p {
+  margin-bottom: 1.5rem;
+}
+
+.story strong {
+  color: #667eea;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.stat {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+}
+
+.statNumber {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.statLabel {
+  color: #718096;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .pageHeader h1 {
+    font-size: 2.5rem;
+  }
+  
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
