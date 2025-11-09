@@ -113,6 +113,84 @@ export default function Blog() {
             </Link>
           </article>
 
+          {/* Third Article */}
+          <article style={{
+            background: 'white',
+            padding: '2.5rem',
+            borderRadius: '12px',
+            marginBottom: '2rem',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+          }}>
+            <h2 style={{
+              fontSize: '2rem',
+              marginBottom: '1rem',
+              color: '#2d3748'
+            }}>
+              I Accidentally Built Enterprise AI Architecture (And You Can Too)
+            </h2>
+            
+            <p style={{
+              fontSize: '1.1rem',
+              lineHeight: '1.8',
+              color: '#4a5568',
+              marginBottom: '1.5rem'
+            }}>
+              Turns out my "context document" system is actually RAG. Here's what I learned building enterprise AI architecture in my free time — and how you can do it too.
+            </p>
+            
+            <Link href="/blog/context-doc" style={{
+              display: 'inline-block',
+              padding: '0.75rem 2rem',
+              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+              color: 'white',
+              borderRadius: '6px',
+              textDecoration: 'none',
+              fontWeight: '600',
+              transition: 'transform 0.2s'
+            }}>
+              Read Full Article →
+            </Link>
+          </article>
+
+          {/* Fourth Article */}
+          <article style={{
+            background: 'white',
+            padding: '2.5rem',
+            borderRadius: '12px',
+            marginBottom: '2rem',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+          }}>
+            <h2 style={{
+              fontSize: '2rem',
+              marginBottom: '1rem',
+              color: '#2d3748'
+            }}>
+              How I Actually Use AI (Every Day)
+            </h2>
+            
+            <p style={{
+              fontSize: '1.1rem',
+              lineHeight: '1.8',
+              color: '#4a5568',
+              marginBottom: '1.5rem'
+            }}>
+              Not magic. Just practical ways AI helps me work, think, and build faster. From idea wrangling to career strategy to startup building — here's what actually works.
+            </p>
+            
+            <Link href="/blog/how-i-use-ai" style={{
+              display: 'inline-block',
+              padding: '0.75rem 2rem',
+              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+              color: 'white',
+              borderRadius: '6px',
+              textDecoration: 'none',
+              fontWeight: '600',
+              transition: 'transform 0.2s'
+            }}>
+              Read Full Article →
+            </Link>
+          </article>
+
           {/* Coming Soon */}
           <div style={{
             textAlign: 'center',
