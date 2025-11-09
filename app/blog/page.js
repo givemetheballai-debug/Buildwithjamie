@@ -17,17 +17,17 @@ export default function Blog() {
 
       {/* Article List */}
       <section className="section bg-secondary">
-        <div className="container" style={{maxWidth: '900px'}}>
+        <div className="container content-narrow">
           
           {/* Featured Article */}
-          <article className="card mb-lg" style={{border: '2px solid var(--accent-cyan)'}}>
+          <article className="card mb-lg border">
             <span className="badge badge-premium mb-md">⭐ Featured</span>
             
             <h2 className="text-3xl font-bold mb-md">
               5 Problems Everyone Has with AI (and How to Actually Fix Them)
             </h2>
             
-            <p className="text-lg mb-lg opacity-70" style={{lineHeight: '1.8'}}>
+            <p className="text-lg mb-lg opacity-70 line-height-relaxed">
               If you've been using ChatGPT or Claude for more than a week, you've probably hit the same walls everyone else does. Wrong tool, bad prompts, getting stuck, scared of costs, losing your work. Here's what actually trips people up — and what to do about it.
             </p>
             
@@ -42,7 +42,7 @@ export default function Blog() {
               3 Things You Should Be Using AI For Right Now
             </h2>
             
-            <p className="text-lg mb-lg opacity-70" style={{lineHeight: '1.8'}}>
+            <p className="text-lg mb-lg opacity-70 line-height-relaxed">
               Stop overthinking it. Writing & content, research & learning, life planning — here's exactly how to use AI for each one, which tools work best, and the prompts that actually get results.
             </p>
             
@@ -57,7 +57,7 @@ export default function Blog() {
               I Accidentally Built Enterprise AI Architecture (And You Can Too)
             </h2>
             
-            <p className="text-lg mb-lg opacity-70" style={{lineHeight: '1.8'}}>
+            <p className="text-lg mb-lg opacity-70 line-height-relaxed">
               Turns out my "context document" system is actually RAG. Here's what I learned building enterprise AI architecture in my free time — and how you can do it too.
             </p>
             
@@ -72,7 +72,7 @@ export default function Blog() {
               How I Actually Use AI (Every Day)
             </h2>
             
-            <p className="text-lg mb-lg opacity-70" style={{lineHeight: '1.8'}}>
+            <p className="text-lg mb-lg opacity-70 line-height-relaxed">
               Not magic. Just practical ways AI helps me work, think, and build faster. From idea wrangling to career strategy to startup building — here's what actually works.
             </p>
             
