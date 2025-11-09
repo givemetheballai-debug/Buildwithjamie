@@ -10,7 +10,7 @@ export default function Navigation() {
 
   return (
     <nav style={{
-      background: 'rgba(255, 255, 255, 0.95)',
+      background: 'rgba(0, 0, 0, 0.98)',
       backdropFilter: 'blur(10px)',
       padding: '1rem 2rem',
       position: 'fixed',
@@ -18,7 +18,8 @@ export default function Navigation() {
       left: 0,
       right: 0,
       zIndex: 1000,
-      boxShadow: '0 2px 10px rgba(0,0,0,0.05)'
+      boxShadow: '0 2px 10px rgba(0, 0, 0, 0.8)',
+      borderBottom: '1px solid #333333'
     }}>
       <div style={{
         maxWidth: '1200px',
@@ -31,7 +32,7 @@ export default function Navigation() {
         <Link href="/" onClick={closeMenu} style={{
           fontSize: '1.5rem',
           fontWeight: '700',
-          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+          background: 'linear-gradient(135deg, #00f2ea 0%, #ff0050 100%)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
           backgroundClip: 'text',
@@ -49,7 +50,7 @@ export default function Navigation() {
             border: 'none',
             fontSize: '1.5rem',
             cursor: 'pointer',
-            color: '#4a5568'
+            color: '#00f2ea'
           }}
           className="mobile-menu-btn"
         >
@@ -62,68 +63,68 @@ export default function Navigation() {
           alignItems: 'center'
         }} className={`nav-links ${isOpen ? 'active' : ''}`}>
           <Link href="/" onClick={closeMenu} style={{
-            color: '#4a5568',
+            color: 'rgba(255, 255, 255, 0.7)',
             textDecoration: 'none',
             fontWeight: '500',
             transition: 'color 0.2s'
           }}
-          onMouseOver={(e) => e.currentTarget.style.color = '#667eea'}
-          onMouseOut={(e) => e.currentTarget.style.color = '#4a5568'}>
+          onMouseOver={(e) => e.currentTarget.style.color = '#00f2ea'}
+          onMouseOut={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)'}>
             Home
           </Link>
 
           <Link href="/resources" onClick={closeMenu} style={{
-            color: '#4a5568',
+            color: 'rgba(255, 255, 255, 0.7)',
             textDecoration: 'none',
             fontWeight: '500',
             transition: 'color 0.2s'
           }}
-          onMouseOver={(e) => e.currentTarget.style.color = '#667eea'}
-          onMouseOut={(e) => e.currentTarget.style.color = '#4a5568'}>
+          onMouseOver={(e) => e.currentTarget.style.color = '#00f2ea'}
+          onMouseOut={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)'}>
             Resources
           </Link>
 
           <Link href="/blog" onClick={closeMenu} style={{
-            color: '#4a5568',
+            color: 'rgba(255, 255, 255, 0.7)',
             textDecoration: 'none',
             fontWeight: '500',
             transition: 'color 0.2s'
           }}
-          onMouseOver={(e) => e.currentTarget.style.color = '#667eea'}
-          onMouseOut={(e) => e.currentTarget.style.color = '#4a5568'}>
+          onMouseOver={(e) => e.currentTarget.style.color = '#00f2ea'}
+          onMouseOut={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)'}>
             Blog
           </Link>
 
           <Link href="/tools" onClick={closeMenu} style={{
-            color: '#4a5568',
+            color: 'rgba(255, 255, 255, 0.7)',
             textDecoration: 'none',
             fontWeight: '500',
             transition: 'color 0.2s'
           }}
-          onMouseOver={(e) => e.currentTarget.style.color = '#667eea'}
-          onMouseOut={(e) => e.currentTarget.style.color = '#4a5568'}>
+          onMouseOver={(e) => e.currentTarget.style.color = '#00f2ea'}
+          onMouseOut={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)'}>
             Tools
           </Link>
 
           <Link href="/projects" onClick={closeMenu} style={{
-            color: '#4a5568',
+            color: 'rgba(255, 255, 255, 0.7)',
             textDecoration: 'none',
             fontWeight: '500',
             transition: 'color 0.2s'
           }}
-          onMouseOver={(e) => e.currentTarget.style.color = '#667eea'}
-          onMouseOut={(e) => e.currentTarget.style.color = '#4a5568'}>
+          onMouseOver={(e) => e.currentTarget.style.color = '#00f2ea'}
+          onMouseOut={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)'}>
             Projects
           </Link>
 
           <Link href="/about" onClick={closeMenu} style={{
-            color: '#4a5568',
+            color: 'rgba(255, 255, 255, 0.7)',
             textDecoration: 'none',
             fontWeight: '500',
             transition: 'color 0.2s'
           }}
-          onMouseOver={(e) => e.currentTarget.style.color = '#667eea'}
-          onMouseOut={(e) => e.currentTarget.style.color = '#4a5568'}>
+          onMouseOver={(e) => e.currentTarget.style.color = '#00f2ea'}
+          onMouseOut={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)'}>
             About
           </Link>
         </div>
@@ -144,10 +145,11 @@ export default function Navigation() {
             top: 100%;
             left: 0;
             right: 0;
-            background: white;
+            background: #000000;
             flex-direction: column;
             padding: 1rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+            border-top: 1px solid #333333;
             display: none;
           }
           
