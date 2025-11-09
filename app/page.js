@@ -49,8 +49,11 @@ export default function Home() {
       {/* Credibility Strip */}
       <section style={{padding: '2rem', background: '#2d3748', color: 'white', textAlign: 'center'}}>
         <div style={{maxWidth: '900px', margin: '0 auto'}}>
-          <p style={{fontSize: '1.2rem', lineHeight: '1.6'}}>
-            15 years managing $200M+ product portfolios. Built brands at Nielsen and Kantar. Now building companies with AI as my advantage.
+          <p style={{fontSize: '1.2rem', lineHeight: '1.6', marginBottom: '0.5rem'}}>
+            15+ years in marketing and advertising. Early adopter who builds real things.
+          </p>
+          <p style={{fontSize: '1rem', fontStyle: 'italic', opacity: '0.9'}}>
+            Award-winning marketer (Future Media 100, Global Innovation winner). Built a women's sports site using AI.
           </p>
         </div>
       </section>
