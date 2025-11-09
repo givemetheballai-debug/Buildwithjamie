@@ -187,6 +187,63 @@ export default function PromptLibrary() {
         </div>
       </section>
 
+      {/* Tips Section */}
+      <section style={{padding: '3rem 2rem', background: '#f7fafc'}}>
+        <div style={{maxWidth: '900px', margin: '0 auto'}}>
+          <h2 style={{fontSize: '2rem', marginBottom: '2rem', textAlign: 'center', color: '#2d3748'}}>
+            How to Use These Prompts
+          </h2>
+          
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+            gap: '2rem'
+          }}>
+            <div style={{
+              background: 'white',
+              padding: '1.5rem',
+              borderRadius: '8px',
+              borderLeft: '4px solid #667eea'
+            }}>
+              <h3 style={{fontSize: '1.2rem', marginBottom: '0.75rem', color: '#2d3748'}}>
+                1. Fill in the Brackets
+              </h3>
+              <p style={{color: '#4a5568', lineHeight: '1.6'}}>
+                Replace [topic], [audience], etc. with your specific details. The more specific, the better the output.
+              </p>
+            </div>
+
+            <div style={{
+              background: 'white',
+              padding: '1.5rem',
+              borderRadius: '8px',
+              borderLeft: '4px solid #667eea'
+            }}>
+              <h3 style={{fontSize: '1.2rem', marginBottom: '0.75rem', color: '#2d3748'}}>
+                2. Iterate
+              </h3>
+              <p style={{color: '#4a5568', lineHeight: '1.6'}}>
+                First response not perfect? Ask AI to revise: "Make it more concise" or "Change the tone to casual."
+              </p>
+            </div>
+
+            <div style={{
+              background: 'white',
+              padding: '1.5rem',
+              borderRadius: '8px',
+              borderLeft: '4px solid #667eea'
+            }}>
+              <h3 style={{fontSize: '1.2rem', marginBottom: '0.75rem', color: '#2d3748'}}>
+                3. Add Context
+              </h3>
+              <p style={{color: '#4a5568', lineHeight: '1.6'}}>
+                Upload your context template at the start of sessions for even better, more personalized results.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Prompts by Category */}
       <section style={{padding: '4rem 2rem', background: '#f7fafc'}}>
         <div style={{maxWidth: '1100px', margin: '0 auto'}}>
@@ -266,63 +323,6 @@ export default function PromptLibrary() {
               </div>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Tips Section */}
-      <section style={{padding: '3rem 2rem', background: 'white'}}>
-        <div style={{maxWidth: '900px', margin: '0 auto'}}>
-          <h2 style={{fontSize: '2rem', marginBottom: '2rem', textAlign: 'center', color: '#2d3748'}}>
-            How to Use These Prompts
-          </h2>
-          
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-            gap: '2rem'
-          }}>
-            <div style={{
-              background: '#f7fafc',
-              padding: '1.5rem',
-              borderRadius: '8px',
-              borderLeft: '4px solid #667eea'
-            }}>
-              <h3 style={{fontSize: '1.2rem', marginBottom: '0.75rem', color: '#2d3748'}}>
-                1. Fill in the Brackets
-              </h3>
-              <p style={{color: '#4a5568', lineHeight: '1.6'}}>
-                Replace [topic], [audience], etc. with your specific details. The more specific, the better the output.
-              </p>
-            </div>
-
-            <div style={{
-              background: '#f7fafc',
-              padding: '1.5rem',
-              borderRadius: '8px',
-              borderLeft: '4px solid #667eea'
-            }}>
-              <h3 style={{fontSize: '1.2rem', marginBottom: '0.75rem', color: '#2d3748'}}>
-                2. Iterate
-              </h3>
-              <p style={{color: '#4a5568', lineHeight: '1.6'}}>
-                First response not perfect? Ask AI to revise: "Make it more concise" or "Change the tone to casual."
-              </p>
-            </div>
-
-            <div style={{
-              background: '#f7fafc',
-              padding: '1.5rem',
-              borderRadius: '8px',
-              borderLeft: '4px solid #667eea'
-            }}>
-              <h3 style={{fontSize: '1.2rem', marginBottom: '0.75rem', color: '#2d3748'}}>
-                3. Add Context
-              </h3>
-              <p style={{color: '#4a5568', lineHeight: '1.6'}}>
-                Upload your context template at the start of sessions for even better, more personalized results.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
