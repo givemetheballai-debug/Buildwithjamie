@@ -48,7 +48,7 @@ export default function FiveProblems() {
               Match the tool to the task. Writing? ChatGPT or Claude. Research with citations? Perplexity. Code? Claude or Cursor. Quick questions? Free ChatGPT is fine.
             </p>
             <p>
-              → <Link href="/resources" style={{color: '#667eea', textDecoration: 'underline'}}>My tool comparison chart</Link> shows you which tool for what
+              → <Link href="/resources/tool-comparison" style={{color: '#667eea', textDecoration: 'underline'}}>My tool comparison chart</Link> shows you which tool for what
             </p>
           </section>
 
@@ -79,7 +79,7 @@ export default function FiveProblems() {
               Good: "Review my product manager resume for an AI startup. I have 10 years experience in SaaS. Flag anything that sounds generic or doesn't show impact with metrics."
             </p>
             <p>
-              → <Link href="/resources" style={{color: '#667eea', textDecoration: 'underline'}}>Download my context template</Link> to write better prompts
+              → <Link href="/resources/context-template" style={{color: '#667eea', textDecoration: 'underline'}}>Download my context template</Link> to write better prompts
             </p>
           </section>
 
@@ -106,7 +106,7 @@ export default function FiveProblems() {
               Pick ONE thing you actually need to do (not a demo project) and figure it out with AI as you go. Need a website? Build it. Need to analyze data? Do it. The gap between beginner and builder is just doing one real thing.
             </p>
             <p>
-              → <Link href="/resources" style={{color: '#667eea', textDecoration: 'underline'}}>My AI context template</Link> helps you work more effectively on real projects
+              → <Link href="/resources/context-template" style={{color: '#667eea', textDecoration: 'underline'}}>My AI context template</Link> helps you work more effectively on real projects
             </p>
           </section>
 
@@ -162,7 +162,7 @@ export default function FiveProblems() {
               <li>Save your best prompts in a doc you can reuse</li>
             </ul>
             <p>
-              → <Link href="/resources" style={{color: '#667eea', textDecoration: 'underline'}}>Download my context template</Link> to maintain continuity across sessions
+              → <Link href="/resources/context-template" style={{color: '#667eea', textDecoration: 'underline'}}>Download my context template</Link> to maintain continuity across sessions
             </p>
           </section>
 
@@ -207,7 +207,7 @@ export default function FiveProblems() {
               }}>
                 Get Free Resources
               </Link>
-              <Link href="/explainers" style={{
+              <Link href="/resources/explainers" style={{
                 display: 'inline-block',
                 padding: '0.75rem 2rem',
                 background: 'white',
@@ -217,7 +217,7 @@ export default function FiveProblems() {
                 textDecoration: 'none',
                 fontWeight: '600'
               }}>
-                AI Explainers
+                Intro to AI
               </Link>
             </div>
           </div>
