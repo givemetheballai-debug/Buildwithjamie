@@ -1,14 +1,13 @@
 import './globals.css'
-
 export const metadata = {
-  title: 'Jamie Williams | AI Product Builder',
-  description: '15 years scaling products. Now shipping AI tools. No hype, just builds.',
+  title: 'Jamie Williams | AI Tools, Tips & Resources - Build With Jamie',
+  description: 'Learn AI from someone who actually uses it. Get practical tips, templates, and tools. No tech bro BS.',
   metadataBase: new URL('https://buildwithjamie.com'),
   openGraph: {
-    title: 'Jamie Williams | AI Product Builder',
-    description: '15 years scaling products. Now shipping AI tools.',
+    title: 'Jamie Williams | AI Tools, Tips & Resources',
+    description: 'Learn AI from someone who actually uses it. Get practical tips, templates, and tools. No tech bro BS.',
     url: 'https://buildwithjamie.com',
-    siteName: 'Jamie Williams',
+    siteName: 'Build With Jamie',
     images: [
       {
         url: '/og-image.png',
@@ -21,8 +20,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Jamie Williams | AI Product Builder',
-    description: '15 years scaling products. Now shipping AI tools.',
+    title: 'Jamie Williams | AI Tools, Tips & Resources',
+    description: 'Learn AI from someone who actually uses it. No tech bro BS.',
     images: ['/og-image.png'],
   },
 }
