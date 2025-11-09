@@ -23,7 +23,7 @@ export default function Graveyard() {
       <section className="section bg-primary">
         <div className="container">
           
-          <div className="card mb-lg" style={{border: '2px solid var(--border-color)'}}>
+          <div className="card mb-lg border">
             <h3 className="text-3xl text-cyan font-bold mb-md">Scene Stealers AI 🪦</h3>
             <p className="text-base mb-sm">
               <strong className="text-pink">Cause of death:</strong> <span className="opacity-70">Copyright nightmare meets AI visual tools that don't work</span>
@@ -36,7 +36,7 @@ export default function Graveyard() {
             </p>
           </div>
 
-          <div className="card mb-lg" style={{border: '2px solid var(--border-color)'}}>
+          <div className="card mb-lg border">
             <h3 className="text-3xl text-cyan font-bold mb-md">Comedy Pilot with ChatGPT 🪦</h3>
             <p className="text-base mb-sm">
               <strong className="text-pink">Cause of death:</strong> <span className="opacity-70">Turns out AI can help write jokes, but it can't make them funny</span>
@@ -49,7 +49,7 @@ export default function Graveyard() {
             </p>
           </div>
 
-          <div className="card mb-lg" style={{border: '2px solid var(--border-color)'}}>
+          <div className="card mb-lg border">
             <h3 className="text-3xl text-cyan font-bold mb-md">Feed Check (Bubble Score) 🪦</h3>
             <p className="text-base mb-sm">
               <strong className="text-pink">Cause of death:</strong> <span className="opacity-70">Instagram API restrictions + people don't actually want to know how bubble-y they are</span>
