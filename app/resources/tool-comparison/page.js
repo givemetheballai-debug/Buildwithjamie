@@ -65,32 +65,32 @@ export default function ToolComparison() {
             <h2 className="text-4xl font-bold mb-lg" style={{color: '#2d3748'}}>Quick Decision Guide</h2>
             
             <div className="tool-grid">
-              <div className="example-box">
+              <div className="tool-item">
                 <h3 className="text-xl mb-xs" style={{color: '#2d3748'}}>For Writing</h3>
                 <p>ChatGPT or Claude</p>
               </div>
               
-              <div className="example-box">
+              <div className="tool-item">
                 <h3 className="text-xl mb-xs" style={{color: '#2d3748'}}>For Coding</h3>
                 <p>Claude or Cursor</p>
               </div>
               
-              <div className="example-box">
+              <div className="tool-item">
                 <h3 className="text-xl mb-xs" style={{color: '#2d3748'}}>For Research</h3>
                 <p>Perplexity</p>
               </div>
               
-              <div className="example-box">
+              <div className="tool-item">
                 <h3 className="text-xl mb-xs" style={{color: '#2d3748'}}>For Quick Questions</h3>
                 <p>Free ChatGPT or Gemini</p>
               </div>
               
-              <div className="example-box">
+              <div className="tool-item">
                 <h3 className="text-xl mb-xs" style={{color: '#2d3748'}}>For Long Projects</h3>
                 <p>Claude with context doc</p>
               </div>
               
-              <div className="example-box">
+              <div className="tool-item">
                 <h3 className="text-xl mb-xs" style={{color: '#2d3748'}}>For Brainstorming</h3>
                 <p>Any of them work</p>
               </div>
