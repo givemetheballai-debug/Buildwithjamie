@@ -170,7 +170,7 @@ export default function PromptLibrary() {
       </div>
 
       {/* Intro */}
-      <section className="section bg-primary border-bottom text-center">
+      <section className="section-sm bg-primary border-bottom text-center">
         <div className="resource-wrapper">
           <p className="text-lg mb-md" style={{color: '#4a5568', lineHeight: '1.8'}}>
             These are the prompts I use daily after 6 months of heavy AI usage. They're specific, tested, and save me hours each week.
@@ -182,9 +182,9 @@ export default function PromptLibrary() {
       </section>
 
       {/* Tips Section */}
-      <section className="section" style={{background: '#f7fafc'}}>
+      <section className="section-sm" style={{background: '#f7fafc'}}>
         <div className="resource-wrapper">
-          <h2 className="text-4xl font-bold mb-xl text-center" style={{color: '#2d3748'}}>
+          <h2 className="text-3xl font-bold mb-lg text-center" style={{color: '#2d3748'}}>
             How to Use These Prompts
           </h2>
           
@@ -220,24 +220,24 @@ export default function PromptLibrary() {
       </section>
 
       {/* Prompts by Category */}
-      <section className="section" style={{background: '#f7fafc'}}>
+      <section className="section-sm" style={{background: '#f7fafc'}}>
         <div style={{maxWidth: '1100px', margin: '0 auto'}}>
           {categories.map((category) => (
-            <div key={category.id} className="mb-2xl">
+            <div key={category.id} className="mb-xl">
               {/* Category Header */}
               <div style={{
                 display: 'flex',
                 alignItems: 'center',
-                marginBottom: '2rem',
-                paddingBottom: '1rem',
+                marginBottom: '1.5rem',
+                paddingBottom: '0.75rem',
                 borderBottom: '3px solid var(--accent-cyan)'
               }}>
-                <div className="text-5xl" style={{marginRight: '1rem'}}>{category.icon}</div>
+                <div className="text-4xl" style={{marginRight: '1rem'}}>{category.icon}</div>
                 <div>
-                  <h2 className="text-4xl font-bold mb-xs" style={{color: '#2d3748'}}>
+                  <h2 className="text-3xl font-bold mb-xs" style={{color: '#2d3748'}}>
                     {category.name}
                   </h2>
-                  <p style={{color: '#718096'}}>{category.description}</p>
+                  <p style={{color: '#718096', fontSize: '0.95rem'}}>{category.description}</p>
                 </div>
               </div>
 
@@ -245,29 +245,29 @@ export default function PromptLibrary() {
               <div style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
-                gap: '1.5rem'
+                gap: '1rem'
               }}>
                 {prompts[category.id].map((prompt) => (
                   <div key={prompt.id} style={{
                     background: 'white',
-                    padding: '1.5rem',
+                    padding: '1.25rem',
                     borderRadius: '8px',
                     boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
                     border: '1px solid #e2e8f0'
                   }}>
                     <h3 style={{
-                      fontSize: '1.1rem',
+                      fontSize: '1rem',
                       color: '#2d3748',
-                      marginBottom: '0.75rem',
+                      marginBottom: '0.5rem',
                       fontWeight: '600'
                     }}>
                       {prompt.title}
                     </h3>
                     <p style={{
-                      fontSize: '0.95rem',
+                      fontSize: '0.9rem',
                       color: '#4a5568',
-                      lineHeight: '1.6',
-                      marginBottom: '1rem',
+                      lineHeight: '1.5',
+                      marginBottom: '0.75rem',
                       fontFamily: 'monospace',
                       background: '#f7fafc',
                       padding: '0.75rem',
@@ -281,6 +281,8 @@ export default function PromptLibrary() {
                       className="btn"
                       style={{
                         width: '100%',
+                        padding: '0.65rem 1rem',
+                        fontSize: '0.9rem',
                         background: copiedPrompt === prompt.id ? '#48bb78' : 'var(--accent-gradient)',
                         color: 'white'
                       }}
