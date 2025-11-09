@@ -98,45 +98,45 @@ export default function PromptLibrary() {
     strategy: [
       {
         id: 's1',
-        title: 'SWOT Analysis',
-        prompt: 'Act as a business strategist. Create a SWOT analysis for [business/project]. Consider: internal strengths, weaknesses, external opportunities, threats. Provide 4-5 detailed points for each with actionable insights.'
+        title: 'Competitive Analysis',
+        prompt: 'Analyze [competitor/product] for me. Focus on: 1) Their positioning and messaging 2) Product features vs ours 3) Pricing strategy 4) What they do better 5) Gaps we can exploit. Be specific and actionable.'
       },
       {
         id: 's2',
-        title: 'Competitive Analysis',
-        prompt: 'Analyze my top 3 competitors: [list companies]. Compare: product features, pricing, market positioning, strengths/weaknesses. Identify gaps I can exploit. Format as a comparison table.'
+        title: 'Data Analysis',
+        prompt: 'Analyze this data: [paste data or upload file]. Tell me: 1) Key trends 2) Surprising insights 3) What the data suggests we should do 4) What questions we should investigate next.'
       },
       {
         id: 's3',
-        title: 'Data Analysis',
-        prompt: 'Analyze this data: [paste data or describe dataset]. Focus on [specific metrics]. Identify the top 3 trends and explain their business impact. Provide actionable recommendations.'
+        title: 'SWOT Analysis',
+        prompt: 'Create a SWOT analysis for [company/product/initiative]. Consider: market position, competitive landscape, resources, trends. Be specific about opportunities and threats we should prioritize.'
       },
       {
         id: 's4',
-        title: 'Business Proposal',
-        prompt: 'Create a business proposal outline for [project/initiative]. Audience: [who will read this]. Include: problem statement, proposed solution, timeline, budget estimate, expected ROI, next steps.'
+        title: 'Go-to-Market Plan',
+        prompt: 'Create a go-to-market strategy for [product]. Target audience: [who]. Key value prop: [what]. Include: positioning, channels, messaging, metrics, timeline. Budget: [amount or constraint].'
       },
       {
         id: 's5',
-        title: 'Decision Framework',
-        prompt: 'I need to decide between [option A] and [option B] for [context]. Help me create a decision framework. Consider: costs, risks, timeline, impact on [key factors]. Recommend an approach.'
+        title: 'Problem Breakdown',
+        prompt: 'Help me think through this problem: [describe problem]. Break it down into: 1) Root causes 2) Contributing factors 3) Possible solutions 4) Pros/cons of each 5) Recommended approach with reasoning.'
       }
     ],
     learning: [
       {
         id: 'l1',
-        title: 'Explain Like I\'m 5',
-        prompt: 'Explain [complex topic] in simple terms. Break it into core concepts. After each concept, ask me a question to test my understanding before moving to the next.'
+        title: 'Learn New Topic',
+        prompt: 'I need to understand [topic]. Explain it like I\'m [beginner/intermediate/advanced]. Include: 1) Core concepts 2) Why it matters 3) Real-world applications 4) Common misconceptions 5) Where to go deeper.'
       },
       {
         id: 'l2',
-        title: 'Topic Summary',
-        prompt: 'Summarize the key concepts of [topic]. Include: 1) Core principles 2) Common misconceptions 3) Practical applications 4) Resources for deeper learning. Keep it under 500 words.'
+        title: 'Compare Options',
+        prompt: 'Compare [option A] vs [option B] for [use case]. Create a side-by-side comparison covering: features, pricing, pros/cons, best fit scenarios. Help me decide which is better for my situation: [your context].'
       },
       {
         id: 'l3',
-        title: 'Research Brief',
-        prompt: 'I need to research [topic] for [purpose]. Find the most important information about: [specific aspects]. Cite sources and prioritize recent, credible information. Format as a brief.'
+        title: 'Research Summary',
+        prompt: 'Summarize the key insights from this: [paste article/document]. Focus on: 1) Main arguments 2) Supporting evidence 3) Practical implications 4) What\'s missing or questionable.'
       },
       {
         id: 'l4',
@@ -164,79 +164,54 @@ export default function PromptLibrary() {
       <Navigation />
       
       {/* Hero */}
-      <div style={{
-        marginTop: '70px',
-        padding: '4rem 2rem',
-        textAlign: 'center',
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-        color: 'white'
-      }}>
-        <h1 style={{fontSize: '3rem', marginBottom: '1rem'}}>Prompt Library</h1>
-        <p style={{fontSize: '1.2rem'}}>My best prompts for daily productivity</p>
+      <div className="resource-hero">
+        <h1 className="text-5xl font-bold mb-md">Prompt Library</h1>
+        <p className="text-xl">My best prompts for daily productivity</p>
       </div>
 
       {/* Intro */}
-      <section style={{padding: '3rem 2rem', background: 'white', borderBottom: '2px solid #e2e8f0'}}>
-        <div style={{maxWidth: '900px', margin: '0 auto', textAlign: 'center'}}>
-          <p style={{fontSize: '1.1rem', color: '#4a5568', lineHeight: '1.8', marginBottom: '1.5rem'}}>
+      <section className="section bg-primary border-bottom text-center">
+        <div className="resource-wrapper">
+          <p className="text-lg mb-md" style={{color: '#4a5568', lineHeight: '1.8'}}>
             These are the prompts I use daily after 6 months of heavy AI usage. They're specific, tested, and save me hours each week.
           </p>
-          <p style={{fontSize: '1rem', color: '#718096'}}>
+          <p className="text-base" style={{color: '#718096'}}>
             Click any prompt to copy it. Then paste into ChatGPT, Claude, or Gemini and fill in the brackets.
           </p>
         </div>
       </section>
 
       {/* Tips Section */}
-      <section style={{padding: '3rem 2rem', background: '#f7fafc'}}>
-        <div style={{maxWidth: '900px', margin: '0 auto'}}>
-          <h2 style={{fontSize: '2rem', marginBottom: '2rem', textAlign: 'center', color: '#2d3748'}}>
+      <section className="section" style={{background: '#f7fafc'}}>
+        <div className="resource-wrapper">
+          <h2 className="text-4xl font-bold mb-xl text-center" style={{color: '#2d3748'}}>
             How to Use These Prompts
           </h2>
           
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-            gap: '2rem'
-          }}>
-            <div style={{
-              background: 'white',
-              padding: '1.5rem',
-              borderRadius: '8px',
-              borderLeft: '4px solid #667eea'
-            }}>
-              <h3 style={{fontSize: '1.2rem', marginBottom: '0.75rem', color: '#2d3748'}}>
+          <div className="tool-grid">
+            <div className="tool-item">
+              <h3 className="text-xl mb-sm" style={{color: '#2d3748'}}>
                 1. Fill in the Brackets
               </h3>
-              <p style={{color: '#4a5568', lineHeight: '1.6'}}>
+              <p>
                 Replace [topic], [audience], etc. with your specific details. The more specific, the better the output.
               </p>
             </div>
 
-            <div style={{
-              background: 'white',
-              padding: '1.5rem',
-              borderRadius: '8px',
-              borderLeft: '4px solid #667eea'
-            }}>
-              <h3 style={{fontSize: '1.2rem', marginBottom: '0.75rem', color: '#2d3748'}}>
+            <div className="tool-item">
+              <h3 className="text-xl mb-sm" style={{color: '#2d3748'}}>
                 2. Iterate
               </h3>
-              <p style={{color: '#4a5568', lineHeight: '1.6'}}>
+              <p>
                 First response not perfect? Ask AI to revise: "Make it more concise" or "Change the tone to casual."
               </p>
             </div>
 
-            <div style={{
-              background: 'white',
-              padding: '1.5rem',
-              borderRadius: '8px',
-              borderLeft: '4px solid #667eea'
-            }}>
-              <h3 style={{fontSize: '1.2rem', marginBottom: '0.75rem', color: '#2d3748'}}>
+            <div className="tool-item">
+              <h3 className="text-xl mb-sm" style={{color: '#2d3748'}}>
                 3. Add Context
               </h3>
-              <p style={{color: '#4a5568', lineHeight: '1.6'}}>
+              <p>
                 Upload your context template at the start of sessions for even better, more personalized results.
               </p>
             </div>
@@ -245,24 +220,24 @@ export default function PromptLibrary() {
       </section>
 
       {/* Prompts by Category */}
-      <section style={{padding: '4rem 2rem', background: '#f7fafc'}}>
+      <section className="section" style={{background: '#f7fafc'}}>
         <div style={{maxWidth: '1100px', margin: '0 auto'}}>
           {categories.map((category) => (
-            <div key={category.id} style={{marginBottom: '4rem'}}>
+            <div key={category.id} className="mb-2xl">
               {/* Category Header */}
               <div style={{
                 display: 'flex',
                 alignItems: 'center',
                 marginBottom: '2rem',
                 paddingBottom: '1rem',
-                borderBottom: '3px solid #667eea'
+                borderBottom: '3px solid var(--accent-cyan)'
               }}>
-                <div style={{fontSize: '2.5rem', marginRight: '1rem'}}>{category.icon}</div>
+                <div className="text-5xl" style={{marginRight: '1rem'}}>{category.icon}</div>
                 <div>
-                  <h2 style={{fontSize: '2rem', color: '#2d3748', marginBottom: '0.25rem'}}>
+                  <h2 className="text-4xl font-bold mb-xs" style={{color: '#2d3748'}}>
                     {category.name}
                   </h2>
-                  <p style={{color: '#718096', fontSize: '1rem'}}>{category.description}</p>
+                  <p style={{color: '#718096'}}>{category.description}</p>
                 </div>
               </div>
 
@@ -303,20 +278,14 @@ export default function PromptLibrary() {
                     </p>
                     <button
                       onClick={() => copyToClipboard(prompt.prompt, prompt.id)}
+                      className="btn"
                       style={{
                         width: '100%',
-                        padding: '0.75rem',
-                        background: copiedPrompt === prompt.id ? '#48bb78' : 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                        color: 'white',
-                        border: 'none',
-                        borderRadius: '6px',
-                        fontSize: '0.9rem',
-                        fontWeight: '600',
-                        cursor: 'pointer',
-                        transition: 'all 0.2s'
+                        background: copiedPrompt === prompt.id ? '#48bb78' : 'var(--accent-gradient)',
+                        color: 'white'
                       }}
                     >
-                      {copiedPrompt === prompt.id ? '✓ Copied!' : 'Copy Prompt'}
+                      {copiedPrompt === prompt.id ? '✓ Copied!' : '📋 Copy Prompt'}
                     </button>
                   </div>
                 ))}
