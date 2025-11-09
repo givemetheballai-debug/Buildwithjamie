@@ -6,239 +6,315 @@ import Footer from '../components/Footer'
 export default function Home() {
   return (
     <>
+      {/* SEO Meta Tags - Update in layout.js or head.js */}
+      {/* 
+      <title>Jamie Williams | AI, Business & Culture Intelligence</title>
+      <meta name="description" content="I spot patterns across AI, business, and culture—then I experiment. Get practical AI resources, daily intelligence, and strategic insights." />
+      <meta property="og:title" content="Jamie Williams | AI, Business & Culture Intelligence" />
+      <meta property="og:description" content="I spot patterns across AI, business, and culture—then I experiment." />
+      <meta property="og:type" content="website" />
+      */}
+      
       <Navigation />
       
-      {/* Stats Hero Section - Black + Neon */}
-      <div style={{
+      {/* Stats Hero Section */}
+      <section className="hero-stats" style={{
         marginTop: '70px',
         padding: '3rem 2rem',
-        background: '#000000',
-        color: 'white',
+        background: 'var(--bg-primary)',
+        color: 'var(--text-primary)',
         textAlign: 'center'
       }}>
-        <div style={{maxWidth: '1000px', margin: '0 auto'}}>
-          <div style={{
+        <div className="container">
+          <div className="stats-grid" style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
             gap: '2rem',
-            marginBottom: '2rem'
+            marginBottom: '2rem',
+            maxWidth: '1000px',
+            margin: '0 auto 2rem'
           }}>
-            <div>
-              <h2 style={{
+            <div className="stat-item">
+              <h2 className="text-gradient" style={{
                 fontSize: '3.5rem', 
                 fontWeight: '700', 
                 marginBottom: '0.5rem', 
-                lineHeight: '1',
-                background: 'linear-gradient(135deg, #00f2ea 0%, #ff0050 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text'
+                lineHeight: '1'
               }}>48%</h2>
-              <p style={{fontSize: '1.1rem', opacity: '0.8'}}>Don't know how to use AI effectively</p>
+              <p style={{fontSize: '1.1rem', opacity: '0.8'}}>
+                Don't know how to use AI effectively
+              </p>
             </div>
-            <div>
-              <h2 style={{
+            <div className="stat-item">
+              <h2 className="text-gradient" style={{
                 fontSize: '3.5rem', 
                 fontWeight: '700', 
                 marginBottom: '0.5rem', 
-                lineHeight: '1',
-                background: 'linear-gradient(135deg, #00f2ea 0%, #ff0050 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text'
+                lineHeight: '1'
               }}>63%</h2>
-              <p style={{fontSize: '1.1rem', opacity: '0.8'}}>Don't see AI as relevant to their work</p>
+              <p style={{fontSize: '1.1rem', opacity: '0.8'}}>
+                Don't see AI as relevant to their work
+              </p>
             </div>
-            <div>
-              <h2 style={{
+            <div className="stat-item">
+              <h2 className="text-gradient" style={{
                 fontSize: '3.5rem', 
                 fontWeight: '700', 
                 marginBottom: '0.5rem', 
-                lineHeight: '1',
-                background: 'linear-gradient(135deg, #00f2ea 0%, #ff0050 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text'
+                lineHeight: '1'
               }}>25%</h2>
-              <p style={{fontSize: '1.1rem', opacity: '0.8'}}>Of AI projects actually deliver ROI</p>
+              <p style={{fontSize: '1.1rem', opacity: '0.8'}}>
+                Of AI projects actually deliver ROI
+              </p>
             </div>
           </div>
           
-          <h1 style={{fontSize: '2.5rem', fontWeight: '700', marginBottom: '1rem', lineHeight: '1.2'}}>
-            I help you cut through the confusion.
+          <h1 style={{
+            fontSize: '2.5rem', 
+            fontWeight: '700', 
+            marginBottom: '1rem', 
+            lineHeight: '1.2'
+          }}>
+            I spot patterns across AI, business, and culture—then I experiment.
           </h1>
           <p style={{fontSize: '1.3rem', opacity: '0.85', lineHeight: '1.6'}}>
-            No tech bro BS. Just what actually works.
-          </p>
-        </div>
-      </div>
-
-      {/* Credibility Strip */}
-      <section style={{padding: '2rem', background: '#1a1a1a', color: 'white', textAlign: 'center', borderTop: '1px solid #333'}}>
-        <div style={{maxWidth: '900px', margin: '0 auto'}}>
-          <p style={{fontSize: '1.2rem', lineHeight: '1.6', marginBottom: '0.5rem'}}>
-            15+ years in marketing and advertising. Early adopter who builds real things.
-          </p>
-          <p style={{fontSize: '1rem', fontStyle: 'italic', opacity: '0.7'}}>
-            Award-winning marketer (Future Media 100, Global Innovation winner). Built a women's sports site using AI.
+            Here's what I'm learning.
           </p>
         </div>
       </section>
 
-      {/* Main Content - Bento Grid */}
-      <section style={{padding: '2.5rem 2rem', background: '#0a0a0a'}}>
-        <div style={{maxWidth: '1200px', margin: '0 auto'}}>
-          
-          {/* Featured Resources - Bento Style */}
-          <h2 style={{fontSize: '2.5rem', fontWeight: '700', marginBottom: '2rem', color: 'white'}}>
+      {/* Credibility Strip */}
+      <section className="credibility-strip" style={{
+        padding: '2rem', 
+        background: 'var(--bg-tertiary)', 
+        color: 'var(--text-primary)', 
+        textAlign: 'center',
+        borderTop: '1px solid var(--border-color)'
+      }}>
+        <div className="container">
+          <p style={{
+            fontSize: '1.2rem', 
+            lineHeight: '1.6', 
+            marginBottom: '0.5rem'
+          }}>
+            15+ years in marketing and advertising. Early adopter who connects AI, business, and culture.
+          </p>
+          <p style={{
+            fontSize: '1rem', 
+            fontStyle: 'italic', 
+            opacity: '0.7'
+          }}>
+            Award-winning marketer (Future Media 100, Global Innovation winner).
+          </p>
+        </div>
+      </section>
+
+      {/* Start Here - Featured Resources */}
+      <section className="resources-featured" style={{
+        padding: '2.5rem 2rem', 
+        background: 'var(--bg-secondary)'
+      }}>
+        <div className="container">
+          <h2 style={{
+            fontSize: '2.5rem', 
+            fontWeight: '700', 
+            marginBottom: '2rem', 
+            color: 'var(--text-primary)'
+          }}>
             Start Here
           </h2>
           
-          <div style={{
+          <div className="content-grid-3" style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
             gap: '1.5rem',
             marginBottom: '3rem'
           }}>
-            {/* Intro to AI - Large Block */}
-            <a href="/resources/explainers" style={{
-              padding: '2.5rem',
-              background: 'linear-gradient(135deg, #00f2ea 0%, #ff0050 100%)',
-              color: 'white',
-              borderRadius: '12px',
-              textDecoration: 'none',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-between',
-              minHeight: '280px',
-              transition: 'transform 0.2s, box-shadow 0.2s',
-              boxShadow: '0 4px 30px rgba(0, 242, 234, 0.3)'
-            }}
-            onMouseOver={(e) => {
-              e.currentTarget.style.transform = 'translateY(-4px)';
-              e.currentTarget.style.boxShadow = '0 8px 40px rgba(0, 242, 234, 0.5)';
-            }}
-            onMouseOut={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 4px 30px rgba(0, 242, 234, 0.3)';
-            }}>
+            {/* Intro to AI - Featured Card */}
+            <a 
+              href="/resources/explainers" 
+              className="card-featured"
+              aria-label="Learn AI fundamentals"
+              style={{
+                padding: '2.5rem',
+                borderRadius: '12px',
+                textDecoration: 'none',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                minHeight: '280px',
+                transition: 'transform 0.2s, box-shadow 0.2s',
+                background: 'var(--accent-gradient)',
+                color: 'white',
+                boxShadow: 'var(--shadow-neon-cyan)'
+              }}
+            >
               <div>
-                <div style={{fontSize: '3rem', marginBottom: '1rem'}}>🎓</div>
-                <h3 style={{fontSize: '2rem', fontWeight: '700', marginBottom: '1rem'}}>Intro to AI</h3>
+                {/* Image placeholder - replace emoji with actual icon later */}
+                <div className="media-placeholder" style={{
+                  fontSize: '3rem', 
+                  marginBottom: '1rem'
+                }} aria-hidden="true">
+                  🎓
+                </div>
+                <h3 style={{fontSize: '2rem', fontWeight: '700', marginBottom: '1rem'}}>
+                  Intro to AI
+                </h3>
                 <p style={{fontSize: '1.2rem', opacity: '0.95', lineHeight: '1.6'}}>
                   For the 48% who don't know where to start. Clear, practical guidance.
                 </p>
               </div>
-              <div style={{fontSize: '1.1rem', fontWeight: '600', marginTop: '1rem'}}>Start learning →</div>
+              <div style={{fontSize: '1.1rem', fontWeight: '600', marginTop: '1rem'}}>
+                Start learning →
+              </div>
             </a>
 
             {/* Prompt Library */}
-            <a href="/resources/prompts" style={{
-              padding: '2rem',
-              background: '#1a1a1a',
-              color: 'white',
-              borderRadius: '12px',
-              textDecoration: 'none',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-between',
-              transition: 'transform 0.2s, box-shadow 0.2s',
-              boxShadow: '0 4px 20px rgba(0,0,0,0.5)',
-              border: '1px solid #333'
-            }}
-            onMouseOver={(e) => {
-              e.currentTarget.style.transform = 'translateY(-4px)';
-              e.currentTarget.style.boxShadow = '0 8px 30px rgba(255, 0, 80, 0.3)';
-              e.currentTarget.style.borderColor = '#ff0050';
-            }}
-            onMouseOut={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.5)';
-              e.currentTarget.style.borderColor = '#333';
-            }}>
+            <a 
+              href="/resources/prompts" 
+              className="card"
+              aria-label="Get AI prompts"
+              style={{
+                padding: '2rem',
+                background: 'var(--bg-tertiary)',
+                color: 'var(--text-primary)',
+                borderRadius: '12px',
+                textDecoration: 'none',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                transition: 'transform 0.2s, box-shadow 0.2s, border-color 0.2s',
+                boxShadow: 'var(--shadow-sm)',
+                border: '1px solid var(--border-color)'
+              }}
+            >
               <div>
-                <div style={{fontSize: '2.5rem', marginBottom: '0.75rem'}}>💬</div>
-                <h3 style={{fontSize: '1.5rem', fontWeight: '700', marginBottom: '0.75rem'}}>Prompt Library</h3>
+                <div className="media-placeholder" style={{
+                  fontSize: '2.5rem', 
+                  marginBottom: '0.75rem'
+                }} aria-hidden="true">
+                  💬
+                </div>
+                <h3 style={{fontSize: '1.5rem', fontWeight: '700', marginBottom: '0.75rem'}}>
+                  Prompt Library
+                </h3>
                 <p style={{fontSize: '1rem', opacity: '0.7', lineHeight: '1.6'}}>
                   Copy-paste prompts that actually work. No fluff.
                 </p>
               </div>
-              <div style={{fontSize: '1rem', fontWeight: '600', color: '#00f2ea', marginTop: '1rem'}}>Get prompts →</div>
+              <div style={{
+                fontSize: '1rem', 
+                fontWeight: '600', 
+                color: 'var(--accent-cyan)', 
+                marginTop: '1rem'
+              }}>
+                Get prompts →
+              </div>
             </a>
 
             {/* Context Template */}
-            <a href="/resources/context-template" style={{
-              padding: '2rem',
-              background: '#1a1a1a',
-              color: 'white',
-              borderRadius: '12px',
-              textDecoration: 'none',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-between',
-              transition: 'transform 0.2s, box-shadow 0.2s',
-              boxShadow: '0 4px 20px rgba(0,0,0,0.5)',
-              border: '1px solid #333'
-            }}
-            onMouseOver={(e) => {
-              e.currentTarget.style.transform = 'translateY(-4px)';
-              e.currentTarget.style.boxShadow = '0 8px 30px rgba(255, 0, 80, 0.3)';
-              e.currentTarget.style.borderColor = '#ff0050';
-            }}
-            onMouseOut={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.5)';
-              e.currentTarget.style.borderColor = '#333';
-            }}>
+            <a 
+              href="/resources/context-template" 
+              className="card"
+              aria-label="Download context template"
+              style={{
+                padding: '2rem',
+                background: 'var(--bg-tertiary)',
+                color: 'var(--text-primary)',
+                borderRadius: '12px',
+                textDecoration: 'none',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                transition: 'transform 0.2s, box-shadow 0.2s, border-color 0.2s',
+                boxShadow: 'var(--shadow-sm)',
+                border: '1px solid var(--border-color)'
+              }}
+            >
               <div>
-                <div style={{fontSize: '2.5rem', marginBottom: '0.75rem'}}>📄</div>
-                <h3 style={{fontSize: '1.5rem', fontWeight: '700', marginBottom: '0.75rem'}}>Context Template</h3>
+                <div className="media-placeholder" style={{
+                  fontSize: '2.5rem', 
+                  marginBottom: '0.75rem'
+                }} aria-hidden="true">
+                  📄
+                </div>
+                <h3 style={{fontSize: '1.5rem', fontWeight: '700', marginBottom: '0.75rem'}}>
+                  Context Template
+                </h3>
                 <p style={{fontSize: '1rem', opacity: '0.7', lineHeight: '1.6'}}>
                   Stop repeating yourself. Make AI remember.
                 </p>
               </div>
-              <div style={{fontSize: '1rem', fontWeight: '600', color: '#00f2ea', marginTop: '1rem'}}>Download →</div>
+              <div style={{
+                fontSize: '1rem', 
+                fontWeight: '600', 
+                color: 'var(--accent-cyan)', 
+                marginTop: '1rem'
+              }}>
+                Download →
+              </div>
             </a>
           </div>
 
-          {/* Latest Thinking */}
-          <h2 style={{fontSize: '2.5rem', fontWeight: '700', marginBottom: '2rem', color: 'white'}}>
+          {/* Latest Thinking - Blog Preview */}
+          <h2 style={{
+            fontSize: '2.5rem', 
+            fontWeight: '700', 
+            marginBottom: '2rem', 
+            color: 'var(--text-primary)'
+          }}>
             Latest Thinking
           </h2>
           
-          <div style={{
+          <div className="content-grid-3" style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
             gap: '1.5rem',
             marginBottom: '3rem'
           }}>
-            <a href="/blog/5-problems" style={{
-              padding: '2rem',
-              background: '#1a1a1a',
-              borderRadius: '12px',
-              textDecoration: 'none',
-              color: 'white',
-              boxShadow: '0 4px 20px rgba(0,0,0,0.5)',
-              transition: 'transform 0.2s, border-color 0.2s',
-              border: '1px solid #333'
-            }}
-            onMouseOver={(e) => {
-              e.currentTarget.style.transform = 'translateY(-4px)';
-              e.currentTarget.style.borderColor = '#00f2ea';
-            }}
-            onMouseOut={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.borderColor = '#333';
-            }}>
+            <a 
+              href="/blog/5-problems" 
+              className="card blog-card"
+              data-analytics="blog-5-problems-click"
+              style={{
+                padding: '2rem',
+                background: 'var(--bg-tertiary)',
+                borderRadius: '12px',
+                textDecoration: 'none',
+                color: 'var(--text-primary)',
+                boxShadow: 'var(--shadow-sm)',
+                transition: 'transform 0.2s, border-color 0.2s',
+                border: '1px solid var(--border-color)'
+              }}
+            >
+              {/* Image placeholder for featured image */}
+              <div className="media-container media-container-16-9" style={{
+                marginBottom: '1rem',
+                background: 'var(--bg-secondary)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                minHeight: '160px'
+              }}>
+                <span style={{opacity: '0.3', fontSize: '0.875rem'}}>Featured image</span>
+              </div>
+              
               <div style={{
                 fontSize: '0.875rem',
-                color: '#00f2ea',
+                color: 'var(--accent-cyan)',
                 fontWeight: '600',
                 marginBottom: '0.75rem',
                 textTransform: 'uppercase',
                 letterSpacing: '0.05em'
-              }}>BLOG</div>
-              <h3 style={{fontSize: '1.5rem', fontWeight: '700', marginBottom: '0.75rem', lineHeight: '1.3'}}>
+              }}>
+                BLOG
+              </div>
+              <h3 style={{
+                fontSize: '1.5rem', 
+                fontWeight: '700', 
+                marginBottom: '0.75rem', 
+                lineHeight: '1.3'
+              }}>
                 5 Problems Everyone Has With AI (And How to Fix Them)
               </h3>
               <p style={{opacity: '0.7', lineHeight: '1.6'}}>
@@ -246,33 +322,47 @@ export default function Home() {
               </p>
             </a>
 
-            <a href="/blog/enterprise-ai" style={{
-              padding: '2rem',
-              background: '#1a1a1a',
-              borderRadius: '12px',
-              textDecoration: 'none',
-              color: 'white',
-              boxShadow: '0 4px 20px rgba(0,0,0,0.5)',
-              transition: 'transform 0.2s, border-color 0.2s',
-              border: '1px solid #333'
-            }}
-            onMouseOver={(e) => {
-              e.currentTarget.style.transform = 'translateY(-4px)';
-              e.currentTarget.style.borderColor = '#00f2ea';
-            }}
-            onMouseOut={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.borderColor = '#333';
-            }}>
+            <a 
+              href="/blog/enterprise-ai" 
+              className="card blog-card"
+              style={{
+                padding: '2rem',
+                background: 'var(--bg-tertiary)',
+                borderRadius: '12px',
+                textDecoration: 'none',
+                color: 'var(--text-primary)',
+                boxShadow: 'var(--shadow-sm)',
+                transition: 'transform 0.2s, border-color 0.2s',
+                border: '1px solid var(--border-color)'
+              }}
+            >
+              <div className="media-container media-container-16-9" style={{
+                marginBottom: '1rem',
+                background: 'var(--bg-secondary)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                minHeight: '160px'
+              }}>
+                <span style={{opacity: '0.3', fontSize: '0.875rem'}}>Featured image</span>
+              </div>
+              
               <div style={{
                 fontSize: '0.875rem',
-                color: '#ff0050',
+                color: 'var(--accent-pink)',
                 fontWeight: '600',
                 marginBottom: '0.75rem',
                 textTransform: 'uppercase',
                 letterSpacing: '0.05em'
-              }}>COMING SOON</div>
-              <h3 style={{fontSize: '1.5rem', fontWeight: '700', marginBottom: '0.75rem', lineHeight: '1.3'}}>
+              }}>
+                COMING SOON
+              </div>
+              <h3 style={{
+                fontSize: '1.5rem', 
+                fontWeight: '700', 
+                marginBottom: '0.75rem', 
+                lineHeight: '1.3'
+              }}>
                 Why 75% of AI Projects Fail
               </h3>
               <p style={{opacity: '0.7', lineHeight: '1.6'}}>
@@ -280,116 +370,193 @@ export default function Home() {
               </p>
             </a>
 
-            <a href="/blog" style={{
-              padding: '2rem',
-              background: '#1a1a1a',
-              borderRadius: '12px',
-              textDecoration: 'none',
-              color: 'white',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '1.2rem',
-              fontWeight: '600',
-              transition: 'transform 0.2s, border-color 0.2s',
-              border: '1px solid #333'
-            }}
-            onMouseOver={(e) => {
-              e.currentTarget.style.transform = 'translateY(-4px)';
-              e.currentTarget.style.borderColor = '#ff0050';
-            }}
-            onMouseOut={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.borderColor = '#333';
-            }}>
+            <a 
+              href="/blog" 
+              className="card"
+              style={{
+                padding: '2rem',
+                background: 'var(--bg-tertiary)',
+                borderRadius: '12px',
+                textDecoration: 'none',
+                color: 'var(--text-primary)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '1.2rem',
+                fontWeight: '600',
+                transition: 'transform 0.2s, border-color 0.2s',
+                border: '1px solid var(--border-color)'
+              }}
+            >
               View all posts →
             </a>
           </div>
 
-          {/* What I'm Building */}
-          <h2 style={{fontSize: '2.5rem', fontWeight: '700', marginBottom: '1rem', color: 'white'}}>
-            What I'm Building
+          {/* Current Experiments */}
+          <h2 style={{
+            fontSize: '2.5rem', 
+            fontWeight: '700', 
+            marginBottom: '1rem', 
+            color: 'var(--text-primary)'
+          }}>
+            Current Experiments
           </h2>
-          <p style={{fontSize: '1.1rem', opacity: '0.7', marginBottom: '2rem', color: 'white'}}>
-            I don't just teach—I build. Here's what I'm working on.
+          <p style={{
+            fontSize: '1.1rem', 
+            opacity: '0.7', 
+            marginBottom: '2rem', 
+            color: 'var(--text-primary)'
+          }}>
+            I learn by building. Here are some things I'm testing.
           </p>
           
-          <div style={{
+          <div className="content-grid-3" style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '1rem',
-            marginBottom: '3rem'
+            gap: '1rem'
           }}>
-            <div style={{
+            <div className="card" style={{
               padding: '1.5rem',
-              background: '#1a1a1a',
+              background: 'var(--bg-tertiary)',
               borderRadius: '12px',
-              border: '1px solid #333'
+              border: '1px solid var(--border-color)'
             }}>
-              <h3 style={{fontSize: '1.3rem', fontWeight: '700', marginBottom: '0.5rem', color: 'white'}}>
+              {/* Screenshot placeholder */}
+              <div className="media-container media-container-16-9" style={{
+                marginBottom: '1rem',
+                background: 'var(--bg-secondary)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}>
+                <span style={{opacity: '0.3', fontSize: '0.875rem'}}>Screenshot</span>
+              </div>
+              <h3 style={{
+                fontSize: '1.3rem', 
+                fontWeight: '700', 
+                marginBottom: '0.5rem', 
+                color: 'var(--text-primary)'
+              }}>
                 givemetheball.com
               </h3>
-              <p style={{fontSize: '0.95rem', opacity: '0.7', lineHeight: '1.6', color: 'white'}}>
+              <p style={{
+                fontSize: '0.95rem', 
+                opacity: '0.7', 
+                lineHeight: '1.6', 
+                color: 'var(--text-primary)'
+              }}>
                 Women's sports + leadership platform. Live scores, newsletters, built with AI.
               </p>
             </div>
 
-            <div style={{
+            <div className="card" style={{
               padding: '1.5rem',
-              background: '#1a1a1a',
+              background: 'var(--bg-tertiary)',
               borderRadius: '12px',
-              border: '1px solid #333'
+              border: '1px solid var(--border-color)'
             }}>
-              <h3 style={{fontSize: '1.3rem', fontWeight: '700', marginBottom: '0.5rem', color: 'white'}}>
+              <div className="media-container media-container-16-9" style={{
+                marginBottom: '1rem',
+                background: 'var(--bg-secondary)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}>
+                <span style={{opacity: '0.3', fontSize: '0.875rem'}}>Screenshot</span>
+              </div>
+              <h3 style={{
+                fontSize: '1.3rem', 
+                fontWeight: '700', 
+                marginBottom: '0.5rem', 
+                color: 'var(--text-primary)'
+              }}>
                 Fancy Lazy Travel
               </h3>
-              <p style={{fontSize: '0.95rem', opacity: '0.7', lineHeight: '1.6', color: 'white'}}>
+              <p style={{
+                fontSize: '0.95rem', 
+                opacity: '0.7', 
+                lineHeight: '1.6', 
+                color: 'var(--text-primary)'
+              }}>
                 3K+ Instagram followers. Testing ad strategies in real-time.
               </p>
             </div>
 
-            <div style={{
+            <div className="card" style={{
               padding: '1.5rem',
-              background: '#1a1a1a',
+              background: 'var(--bg-tertiary)',
               borderRadius: '12px',
-              border: '1px solid #333'
+              border: '1px solid var(--border-color)'
             }}>
-              <h3 style={{fontSize: '1.3rem', fontWeight: '700', marginBottom: '0.5rem', color: 'white'}}>
+              <div className="media-container media-container-16-9" style={{
+                marginBottom: '1rem',
+                background: 'var(--bg-secondary)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}>
+                <span style={{opacity: '0.3', fontSize: '0.875rem'}}>Newsletter preview</span>
+              </div>
+              <h3 style={{
+                fontSize: '1.3rem', 
+                fontWeight: '700', 
+                marginBottom: '0.5rem', 
+                color: 'var(--text-primary)'
+              }}>
                 The Daily AI
               </h3>
-              <p style={{fontSize: '0.95rem', opacity: '0.7', lineHeight: '1.6', color: 'white'}}>
-                Morning briefing on AI, markets, culture. Coming soon.
+              <p style={{
+                fontSize: '0.95rem', 
+                opacity: '0.7', 
+                lineHeight: '1.6', 
+                color: 'var(--text-primary)'
+              }}>
+                Intelligence on AI, business, markets, and culture. Coming soon.
               </p>
             </div>
           </div>
-
         </div>
       </section>
 
-      {/* Newsletter CTA - Full Width */}
-      <section style={{
+      {/* Newsletter CTA */}
+      <section className="newsletter-cta" style={{
         padding: '3rem 2rem',
-        background: 'linear-gradient(135deg, #00f2ea 0%, #ff0050 100%)',
+        background: 'var(--accent-gradient)',
         color: 'white'
       }}>
-        <div style={{maxWidth: '700px', margin: '0 auto', textAlign: 'center'}}>
+        <div className="container" style={{maxWidth: '700px', textAlign: 'center'}}>
           <h2 style={{fontSize: '2.5rem', fontWeight: '700', marginBottom: '1rem'}}>
             📰 The Daily AI
           </h2>
-          <p style={{fontSize: '1.2rem', marginBottom: '2rem', opacity: '0.95', lineHeight: '1.6'}}>
-            Cut through the noise. Get the signal. Every morning, straight to your inbox—AI, tech, markets, culture, leadership.
-          </p>
-          <form style={{
-            display: 'flex',
-            gap: '1rem',
-            maxWidth: '500px',
-            margin: '0 auto',
-            flexWrap: 'wrap',
-            justifyContent: 'center'
+          <p style={{
+            fontSize: '1.2rem', 
+            marginBottom: '2rem', 
+            opacity: '0.95', 
+            lineHeight: '1.6'
           }}>
+            Intelligence on AI, business, markets, and culture. The patterns that matter.
+          </p>
+          
+          {/* Newsletter Form - Update action with your email service */}
+          <form 
+            action="#" 
+            method="POST"
+            aria-label="Subscribe to newsletter"
+            style={{
+              display: 'flex',
+              gap: '1rem',
+              maxWidth: '500px',
+              margin: '0 auto',
+              flexWrap: 'wrap',
+              justifyContent: 'center'
+            }}
+          >
             <input 
               type="email" 
+              name="email"
               placeholder="Your email"
+              required
+              aria-label="Email address"
               style={{
                 flex: '1 1 300px',
                 padding: '1rem 1.5rem',
@@ -399,29 +566,27 @@ export default function Home() {
                 minWidth: '250px'
               }}
             />
-            <button style={{
-              padding: '1rem 2rem',
-              background: '#000000',
-              color: 'white',
-              border: 'none',
-              borderRadius: '8px',
-              fontSize: '1rem',
-              fontWeight: '700',
-              cursor: 'pointer',
-              whiteSpace: 'nowrap',
-              transition: 'transform 0.2s, box-shadow 0.2s'
-            }}
-            onMouseOver={(e) => {
-              e.currentTarget.style.transform = 'scale(1.05)';
-              e.currentTarget.style.boxShadow = '0 8px 20px rgba(0,0,0,0.4)';
-            }}
-            onMouseOut={(e) => {
-              e.currentTarget.style.transform = 'scale(1)';
-              e.currentTarget.style.boxShadow = 'none';
-            }}>
+            <button 
+              type="submit"
+              className="btn-primary"
+              data-analytics="newsletter-signup"
+              style={{
+                padding: '1rem 2rem',
+                background: '#000000',
+                color: 'white',
+                border: 'none',
+                borderRadius: '8px',
+                fontSize: '1rem',
+                fontWeight: '700',
+                cursor: 'pointer',
+                whiteSpace: 'nowrap',
+                transition: 'transform 0.2s, box-shadow 0.2s'
+              }}
+            >
               Join the Waitlist
             </button>
           </form>
+          
           <p style={{fontSize: '0.9rem', marginTop: '1rem', opacity: '0.85'}}>
             Coming soon. Be first in line.
           </p>
