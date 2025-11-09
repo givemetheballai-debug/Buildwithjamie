@@ -633,3 +633,39 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================
+   CONTENT UTILITIES
+   ============================================ */
+.content-narrow {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.line-height-relaxed {
+  line-height: 1.8;
+}
+
+.border {
+  border: 2px solid var(--border-color);
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.min-width-150 {
+  min-width: 150px;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.display-block {
+  display: block;
+}
+
+.border-left-cyan {
+  border-left: 4px solid var(--accent-cyan);
+}
