@@ -143,6 +143,17 @@ export default function Projects() {
                 Entrepreneurial experience in mobile food industry. Taught me about logistics, marketing, customer experience, and running lean operations. First-hand lesson in building something people want.
               </p>
             </div>
+
+            <div className="card bg-tertiary text-center" style={{border: '2px solid var(--border-color)'}}>
+              <div className="text-5xl mb-md">🪦</div>
+              <h3 className="text-2xl font-bold mb-sm">The Graveyard</h3>
+              <p className="text-base opacity-70 mb-md" style={{lineHeight: 1.6}}>
+                Where good ideas go to die (for now). Failed experiments, lessons learned, tombstones collected.
+              </p>
+              <Link href="/graveyard" className="text-cyan font-semibold no-underline">
+                Visit the Graveyard →
+              </Link>
+            </div>
           </div>
         </div>
       </section>
