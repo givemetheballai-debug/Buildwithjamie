@@ -136,13 +136,13 @@ export default function Home() {
               className="card-featured"
               aria-label="Learn AI fundamentals"
               style={{
-                padding: '2.5rem',
+                padding: '3rem',
                 borderRadius: '12px',
                 textDecoration: 'none',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
-                minHeight: '280px',
+                minHeight: '350px',
                 transition: 'transform 0.2s, box-shadow 0.2s',
                 background: 'var(--accent-gradient)',
                 color: 'white',
