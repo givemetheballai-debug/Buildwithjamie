@@ -215,6 +215,18 @@ export default function Home() {
             <p style={{fontSize: '1.1rem', color: '#718096', marginBottom: '1rem'}}>
               <strong>More ways to use it:</strong> Resume help, job search strategy, data analysis, brainstorming... basically anything that makes you go "ugh I don't want to think about this alone."
             </p>
+            <a href="/blog/3-things" style={{
+              display: 'inline-block',
+              padding: '0.75rem 2rem',
+              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+              color: 'white',
+              borderRadius: '6px',
+              textDecoration: 'none',
+              fontWeight: '600',
+              marginTop: '1rem'
+            }}>
+              Read the full guide →
+            </a>
           </div>
         </div>
       </section>
