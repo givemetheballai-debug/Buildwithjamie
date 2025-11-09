@@ -17,7 +17,7 @@ export default function AdvancedTechniques() {
         <div className="resource-wrapper">
           
           {/* Intro */}
-          <div className="text-center mb-2xl">
+          <div className="text-center" style={{marginBottom: '4rem'}}>
             <p className="text-lg" style={{color: '#4a5568', lineHeight: '1.8'}}>
               These techniques take you beyond basic prompting. Use them when you need deeper analysis, 
               multiple perspectives, or structured workflows that integrate with other tools.
