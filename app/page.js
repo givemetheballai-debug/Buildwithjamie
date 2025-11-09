@@ -198,7 +198,7 @@ export default function Home() {
             action="#" 
             method="POST"
             className="form mx-auto"
-            style={{maxWidth: '500px'}}
+            style={{maxWidth: '500px', justifyContent: 'center'}}
             aria-label="Subscribe to newsletter"
           >
             <input 
