@@ -1,8 +1,16 @@
 export default function Footer() {
   return (
-    <footer style={{background: '#2d3748', color: 'white', textAlign: 'center', padding: '3rem 2rem'}}>
+    <footer style={{
+      background: '#1a1a1a', 
+      color: 'white', 
+      textAlign: 'center', 
+      padding: '3rem 2rem',
+      borderTop: '1px solid #333333'
+    }}>
       <div style={{maxWidth: '600px', margin: '0 auto'}}>
-        <p style={{marginBottom: '1.5rem', fontSize: '1.1rem', fontWeight: 600}}>Let's Connect</p>
+        <p style={{marginBottom: '1.5rem', fontSize: '1.1rem', fontWeight: 600}}>
+          Let's Connect
+        </p>
         <div style={{marginBottom: '2rem'}}>
           <a 
             href="https://www.linkedin.com/in/jamiwill/" 
@@ -10,13 +18,13 @@ export default function Footer() {
             style={{
               display: 'inline-block',
               padding: '0.75rem 2rem',
-              background: 'rgba(102, 126, 234, 0.2)',
+              background: 'linear-gradient(135deg, #00f2ea 0%, #ff0050 100%)',
               color: 'white',
               borderRadius: '8px',
               textDecoration: 'none',
               fontWeight: 600,
               transition: 'all 0.3s',
-              border: '2px solid #667eea'
+              border: 'none'
             }}
           >
             Connect on LinkedIn
