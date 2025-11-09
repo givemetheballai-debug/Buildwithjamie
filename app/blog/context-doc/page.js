@@ -8,48 +8,38 @@ export default function ContextDoc() {
       <Navigation />
       
       {/* Article Header */}
-      <div style={{
-        marginTop: '70px',
-        padding: '4rem 2rem',
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-        color: 'white',
-        textAlign: 'center'
-      }}>
-        <h1 style={{fontSize: '2.5rem', marginBottom: '1rem', fontWeight: '700'}}>
+      <div className="article-hero">
+        <h1 className="text-4xl font-bold mb-md">
           I Accidentally Built Enterprise AI Architecture<br/>(And You Can Too)
         </h1>
-        <p style={{fontSize: '1.1rem', opacity: '0.9'}}>
+        <p className="text-xl">
           Turns out my "context document" system is actually RAG. Here's what I learned.
         </p>
       </div>
 
       {/* Article Content */}
-      <article style={{padding: '4rem 2rem'}}>
-        <div style={{maxWidth: '800px', margin: '0 auto', fontSize: '1.1rem', lineHeight: '1.8', color: '#2d3748'}}>
+      <article className="article-content">
+        <div className="article-wrapper">
           
-          <p style={{marginBottom: '2rem', fontSize: '1.2rem'}}>
+          <p style={{fontSize: '1.2rem', marginBottom: '2rem'}}>
             I've been a heavy AI user for six months. Hundreds of sessions across ChatGPT, Claude, and Gemini. Built multiple product concepts. Broke every tool at least once (sorry, AI overlords).
           </p>
 
-          <p style={{marginBottom: '3rem', fontSize: '1.2rem', fontWeight: '600'}}>
+          <p style={{fontSize: '1.2rem', fontWeight: 600, marginBottom: '3rem'}}>
             And somewhere along the way, I accidentally reinvented RAG.
           </p>
 
           {/* What is RAG */}
-          <section style={{marginBottom: '3rem'}}>
-            <h2 style={{fontSize: '2rem', marginBottom: '1rem', color: '#2d3748'}}>
-              What the Hell is RAG?
-            </h2>
-            <p style={{marginBottom: '1rem'}}>
+          <section>
+            <h2>What the Hell is RAG?</h2>
+            <p>
               RAG stands for Retrieval-Augmented Generation.
             </p>
-            <p style={{marginBottom: '1rem'}}>
+            <p>
               It's when you give an AI system access to specific information or documents to reference, so it pulls relevant context and gives you better, more accurate answers instead of just relying on its training data.
             </p>
-            <p style={{marginBottom: '1rem', fontWeight: '600', color: '#667eea'}}>
-              It's what enterprises do.
-            </p>
-            <p style={{marginBottom: '1rem'}}>
+            <p><strong>It's what enterprises do.</strong></p>
+            <p>
               Companies feed AI their internal documents, product specs, customer data, whatever — so the AI can answer questions specific to their business without hallucinating or making stuff up.
             </p>
             <p>
@@ -57,23 +47,19 @@ export default function ContextDoc() {
             </p>
           </section>
 
-          <hr style={{margin: '3rem 0', border: 'none', borderTop: '1px solid #e2e8f0'}} />
+          <hr />
 
           {/* The Problem */}
-          <section style={{marginBottom: '3rem'}}>
-            <h2 style={{fontSize: '2rem', marginBottom: '1rem', color: '#2d3748'}}>
-              The Problem: AI Has Amnesia
-            </h2>
-            <p style={{marginBottom: '1rem'}}>
-              Here's what kept happening:
-            </p>
-            <ul style={{marginBottom: '1rem', paddingLeft: '2rem'}}>
+          <section>
+            <h2>The Problem: AI Has Amnesia</h2>
+            <p>Here's what kept happening:</p>
+            <ul>
               <li>I'd start a new chat and have to re-explain my background</li>
               <li>AI would suggest ideas that didn't fit my work style</li>
               <li>It would forget key details mid-conversation</li>
               <li>Long sessions would degrade — answers got worse over time</li>
             </ul>
-            <p style={{marginBottom: '1rem'}}>
+            <p>
               This was especially bad with Claude, which doesn't have persistent memory like ChatGPT. Every conversation started from scratch.
             </p>
             <p>
@@ -81,90 +67,70 @@ export default function ContextDoc() {
             </p>
           </section>
 
-          <hr style={{margin: '3rem 0', border: 'none', borderTop: '1px solid #e2e8f0'}} />
+          <hr />
 
           {/* The Solution */}
-          <section style={{marginBottom: '3rem'}}>
-            <h2 style={{fontSize: '2rem', marginBottom: '1rem', color: '#2d3748'}}>
-              The Solution: Feed It Context
-            </h2>
-            <p style={{marginBottom: '1rem'}}>
-              I created a document that lives in Google Docs. It has:
-            </p>
-            <ul style={{marginBottom: '1rem', paddingLeft: '2rem'}}>
+          <section>
+            <h2>The Solution: Feed It Context</h2>
+            <p>I created a document that lives in Google Docs. It has:</p>
+            <ul>
               <li><strong>Who I am:</strong> Background, work history, skills</li>
               <li><strong>What I'm working on:</strong> Current projects, goals, priorities</li>
               <li><strong>How I work:</strong> Preferences, communication style, decision frameworks</li>
               <li><strong>What I need help with:</strong> Specific use cases, recurring tasks</li>
             </ul>
-            <p style={{marginBottom: '1rem'}}>
+            <p>
               Every time I start a new conversation, I paste this document into the chat first.
             </p>
-            <p style={{marginBottom: '1rem', fontWeight: '600', color: '#667eea'}}>
-              Boom. Instant context.
-            </p>
+            <p><strong>Boom. Instant context.</strong></p>
             <p>
               Suddenly AI "remembers" who I am, what I care about, and how to help me.
             </p>
           </section>
 
-          <hr style={{margin: '3rem 0', border: 'none', borderTop: '1px solid #e2e8f0'}} />
+          <hr />
 
           {/* What Changed */}
-          <section style={{marginBottom: '3rem'}}>
-            <h2 style={{fontSize: '2rem', marginBottom: '1rem', color: '#2d3748'}}>
-              What Changed
-            </h2>
-            <p style={{marginBottom: '1rem'}}>
-              Once I started using my context doc, everything got better:
-            </p>
+          <section>
+            <h2>What Changed</h2>
+            <p>Once I started using my context doc, everything got better:</p>
 
-            <h3 style={{fontSize: '1.3rem', marginTop: '2rem', marginBottom: '1rem', color: '#667eea'}}>
-              1. Better answers, faster
-            </h3>
-            <p style={{marginBottom: '1rem'}}>
+            <h3>1. Better answers, faster</h3>
+            <p>
               No more "I'm a product manager at a tech company" background every time. AI already knew my situation and could jump straight to helpful.
             </p>
 
-            <h3 style={{fontSize: '1.3rem', marginTop: '2rem', marginBottom: '1rem', color: '#667eea'}}>
-              2. Suggestions actually fit my life
-            </h3>
-            <p style={{marginBottom: '1rem'}}>
+            <h3>2. Suggestions actually fit my life</h3>
+            <p>
               AI stopped suggesting generic advice and started tailoring to my specific context — my industry, my role, my constraints.
             </p>
 
-            <h3 style={{fontSize: '1.3rem', marginTop: '2rem', marginBottom: '1rem', color: '#667eea'}}>
-              3. Continuity across tools
-            </h3>
-            <p style={{marginBottom: '1rem'}}>
+            <h3>3. Continuity across tools</h3>
+            <p>
               I use ChatGPT for some things, Claude for others, Gemini occasionally. The context doc means they all have the same baseline understanding of me.
             </p>
 
-            <h3 style={{fontSize: '1.3rem', marginTop: '2rem', marginBottom: '1rem', color: '#667eea'}}>
-              4. Less mental overhead
-            </h3>
+            <h3>4. Less mental overhead</h3>
             <p>
               I'm not re-explaining myself constantly. Copy, paste, go. It's like having a team member who actually remembers what you talked about last week.
             </p>
           </section>
 
-          <hr style={{margin: '3rem 0', border: 'none', borderTop: '1px solid #e2e8f0'}} />
+          <hr />
 
           {/* The Realization */}
-          <section style={{marginBottom: '3rem'}}>
-            <h2 style={{fontSize: '2rem', marginBottom: '1rem', color: '#2d3748'}}>
-              Wait, This is RAG?
-            </h2>
-            <p style={{marginBottom: '1rem'}}>
+          <section>
+            <h2>Wait, This is RAG?</h2>
+            <p>
               I built this system through trial and error. Zero courses. Just obsessive daily use and a lot of "well that didn't work, let's try something else."
             </p>
-            <p style={{marginBottom: '1rem'}}>
+            <p>
               Then I learned what RAG actually was.
             </p>
-            <p style={{marginBottom: '1rem', fontWeight: '600'}}>
+            <p style={{fontWeight: 600}}>
               Turns out I'd been building enterprise AI architecture in my free time.
             </p>
-            <p style={{marginBottom: '1rem'}}>
+            <p>
               Enterprises pay big money to implement RAG systems. They feed AI their internal knowledge bases so it can answer company-specific questions accurately.
             </p>
             <p>
@@ -172,48 +138,38 @@ export default function ContextDoc() {
             </p>
           </section>
 
-          <hr style={{margin: '3rem 0', border: 'none', borderTop: '1px solid #e2e8f0'}} />
+          <hr />
 
           {/* How to Build Your Own */}
-          <section style={{marginBottom: '3rem'}}>
-            <h2 style={{fontSize: '2rem', marginBottom: '1rem', color: '#2d3748'}}>
-              How to Build Your Own Context Doc
-            </h2>
-            <p style={{marginBottom: '1rem'}}>
+          <section>
+            <h2>How to Build Your Own Context Doc</h2>
+            <p>
               You don't need to be technical. You just need to answer these questions in a Google Doc:
             </p>
 
-            <h3 style={{fontSize: '1.3rem', marginTop: '2rem', marginBottom: '1rem', color: '#667eea'}}>
-              Section 1: Who You Are
-            </h3>
-            <ul style={{marginBottom: '1rem', paddingLeft: '2rem'}}>
+            <h3>Section 1: Who You Are</h3>
+            <ul>
               <li>Your professional background</li>
               <li>Your current role and company</li>
               <li>Your key skills and expertise</li>
             </ul>
 
-            <h3 style={{fontSize: '1.3rem', marginTop: '2rem', marginBottom: '1rem', color: '#667eea'}}>
-              Section 2: What You're Working On
-            </h3>
-            <ul style={{marginBottom: '1rem', paddingLeft: '2rem'}}>
+            <h3>Section 2: What You're Working On</h3>
+            <ul>
               <li>Current projects and priorities</li>
               <li>Goals for the next 3-6 months</li>
               <li>Challenges you're facing</li>
             </ul>
 
-            <h3 style={{fontSize: '1.3rem', marginTop: '2rem', marginBottom: '1rem', color: '#667eea'}}>
-              Section 3: How You Work
-            </h3>
-            <ul style={{marginBottom: '1rem', paddingLeft: '2rem'}}>
+            <h3>Section 3: How You Work</h3>
+            <ul>
               <li>Your communication style and preferences</li>
               <li>Decision-making frameworks you use</li>
               <li>Tools and workflows you rely on</li>
             </ul>
 
-            <h3 style={{fontSize: '1.3rem', marginTop: '2rem', marginBottom: '1rem', color: '#667eea'}}>
-              Section 4: What You Need Help With
-            </h3>
-            <ul style={{marginBottom: '1rem', paddingLeft: '2rem'}}>
+            <h3>Section 4: What You Need Help With</h3>
+            <ul>
               <li>Recurring tasks AI can assist with</li>
               <li>Types of analysis or brainstorming you need</li>
               <li>Specific formats or outputs you want</li>
@@ -224,23 +180,21 @@ export default function ContextDoc() {
             </p>
           </section>
 
-          <hr style={{margin: '3rem 0', border: 'none', borderTop: '1px solid #e2e8f0'}} />
+          <hr />
 
           {/* The Bigger Lesson */}
-          <section style={{marginBottom: '3rem'}}>
-            <h2 style={{fontSize: '2rem', marginBottom: '1rem', color: '#2d3748'}}>
-              The Bigger Lesson
-            </h2>
-            <p style={{marginBottom: '1rem'}}>
+          <section>
+            <h2>The Bigger Lesson</h2>
+            <p>
               Trial-and-error with AI tools is basically a self-taught MBA in how businesses will actually work with this stuff.
             </p>
-            <p style={{marginBottom: '1rem'}}>
+            <p>
               You don't need courses. You don't need certifications.
             </p>
-            <p style={{marginBottom: '1rem', fontWeight: '600'}}>
+            <p style={{fontWeight: 600}}>
               You need to use AI until it breaks, then figure out how to make it not break.
             </p>
-            <p style={{marginBottom: '1rem'}}>
+            <p>
               That's how you learn what actually works. That's how you build intuition. That's how you accidentally reinvent enterprise architecture.
             </p>
             <p>
@@ -248,31 +202,15 @@ export default function ContextDoc() {
             </p>
           </section>
 
-          <hr style={{margin: '3rem 0', border: 'none', borderTop: '1px solid #e2e8f0'}} />
+          <hr />
 
           {/* CTA */}
-          <div style={{
-            marginTop: '4rem',
-            padding: '2rem',
-            background: '#f7fafc',
-            borderRadius: '12px',
-            textAlign: 'center'
-          }}>
-            <h3 style={{fontSize: '1.5rem', marginBottom: '1rem', color: '#2d3748'}}>
-              Want to build your own context doc?
-            </h3>
-            <p style={{marginBottom: '2rem', color: '#4a5568'}}>
+          <div className="article-cta">
+            <h3>Want to build your own context doc?</h3>
+            <p>
               I created a template you can use. It has all the sections pre-built — just fill in your info and start using it.
             </p>
-            <Link href="/resources/context-template" style={{
-              display: 'inline-block',
-              padding: '0.75rem 2rem',
-              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-              color: 'white',
-              borderRadius: '6px',
-              textDecoration: 'none',
-              fontWeight: '600'
-            }}>
+            <Link href="/resources/context-template" className="btn btn-lg bg-gradient no-underline">
               Get the Template
             </Link>
           </div>
