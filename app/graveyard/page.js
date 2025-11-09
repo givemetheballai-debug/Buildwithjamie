@@ -7,72 +7,66 @@ export const metadata = {
 }
 
 export default function Graveyard() {
-  const tombstoneStyle = {
-    background: '#2d3748',
-    borderRadius: '12px',
-    padding: '2rem',
-    marginBottom: '2rem',
-    border: '2px solid #4a5568',
-    position: 'relative',
-    overflow: 'hidden'
-  }
-
   return (
     <>
       <Navigation />
       
-      <div style={{marginTop: '70px', padding: '8rem 2rem 4rem', textAlign: 'center', background: '#1a202c', color: 'white'}}>
-        <h1 style={{fontSize: '4rem', marginBottom: '1rem'}}>The Graveyard 🪦</h1>
-        <p style={{fontSize: '1.5rem', fontStyle: 'italic', opacity: 0.8}}>Where good ideas go to die (for now)</p>
-      </div>
+      {/* Hero */}
+      <section className="section-hero text-center bg-primary">
+        <div className="container">
+          <h1 className="text-6xl font-bold mb-md">The Graveyard 🪦</h1>
+          <p className="text-2xl italic opacity-70">Where good ideas go to die (for now)</p>
+        </div>
+      </section>
       
-      <section style={{padding: '4rem 2rem', background: '#1a202c'}}>
-        <div style={{maxWidth: '1200px', margin: '0 auto'}}>
+      {/* Tombstones */}
+      <section className="section bg-primary">
+        <div className="container">
           
-          <div style={tombstoneStyle}>
-            <h3 style={{fontSize: '1.8rem', color: '#667eea', marginBottom: '1rem'}}>Scene Stealers AI 🪦</h3>
-            <p style={{color: '#cbd5e0', marginBottom: '0.5rem'}}>
-              <strong style={{color: '#e53e3e'}}>Cause of death:</strong> Copyright nightmare meets AI visual tools that don't work
+          <div className="card mb-lg" style={{border: '2px solid var(--border-color)'}}>
+            <h3 className="text-3xl text-cyan font-bold mb-md">Scene Stealers AI 🪦</h3>
+            <p className="text-base mb-sm">
+              <strong className="text-pink">Cause of death:</strong> <span className="opacity-70">Copyright nightmare meets AI visual tools that don't work</span>
             </p>
-            <p style={{color: '#cbd5e0', marginBottom: '0.5rem'}}>
-              <strong style={{color: '#48bb78'}}>What I learned:</strong> AI trivia/movie game idea was fun - mock up AI images putting you in scenes from famous movies or locations. But copyright issues are real, and getting visual AI tools to consistently work is harder than it looks.
+            <p className="text-base mb-sm">
+              <strong className="text-cyan">What I learned:</strong> <span className="opacity-70">AI trivia/movie game idea was fun - mock up AI images putting you in scenes from famous movies or locations. But copyright issues are real, and getting visual AI tools to consistently work is harder than it looks.</span>
             </p>
-            <p style={{color: '#cbd5e0', fontStyle: 'italic', opacity: 0.8}}>
+            <p className="text-base italic opacity-70">
               <strong>Status:</strong> Dead dead. Not coming back.
             </p>
           </div>
 
-          <div style={tombstoneStyle}>
-            <h3 style={{fontSize: '1.8rem', color: '#667eea', marginBottom: '1rem'}}>Comedy Pilot with ChatGPT 🪦</h3>
-            <p style={{color: '#cbd5e0', marginBottom: '0.5rem'}}>
-              <strong style={{color: '#e53e3e'}}>Cause of death:</strong> Turns out AI can help write jokes, but it can't make them funny
+          <div className="card mb-lg" style={{border: '2px solid var(--border-color)'}}>
+            <h3 className="text-3xl text-cyan font-bold mb-md">Comedy Pilot with ChatGPT 🪦</h3>
+            <p className="text-base mb-sm">
+              <strong className="text-pink">Cause of death:</strong> <span className="opacity-70">Turns out AI can help write jokes, but it can't make them funny</span>
             </p>
-            <p style={{color: '#cbd5e0', marginBottom: '0.5rem'}}>
-              <strong style={{color: '#48bb78'}}>What I learned:</strong> Collaborative writing with AI is interesting. But comedy needs timing, nuance, and cultural context that AI doesn't quite get yet. The pilot exists. It's not good.
+            <p className="text-base mb-sm">
+              <strong className="text-cyan">What I learned:</strong> <span className="opacity-70">Collaborative writing with AI is interesting. But comedy needs timing, nuance, and cultural context that AI doesn't quite get yet. The pilot exists. It's not good.</span>
             </p>
-            <p style={{color: '#cbd5e0', fontStyle: 'italic', opacity: 0.8}}>
+            <p className="text-base italic opacity-70">
               <strong>Status:</strong> Filed away as "learning experience."
             </p>
           </div>
 
-          <div style={tombstoneStyle}>
-            <h3 style={{fontSize: '1.8rem', color: '#667eea', marginBottom: '1rem'}}>Feed Check (Bubble Score) 🪦</h3>
-            <p style={{color: '#cbd5e0', marginBottom: '0.5rem'}}>
-              <strong style={{color: '#e53e3e'}}>Cause of death:</strong> Instagram API restrictions + people don't actually want to know how bubble-y they are
+          <div className="card mb-lg" style={{border: '2px solid var(--border-color)'}}>
+            <h3 className="text-3xl text-cyan font-bold mb-md">Feed Check (Bubble Score) 🪦</h3>
+            <p className="text-base mb-sm">
+              <strong className="text-pink">Cause of death:</strong> <span className="opacity-70">Instagram API restrictions + people don't actually want to know how bubble-y they are</span>
             </p>
-            <p style={{color: '#cbd5e0', marginBottom: '0.5rem'}}>
-              <strong style={{color: '#48bb78'}}>What I learned:</strong> Great concept - "Spotify Wrapped for your social bubble." Analyze Instagram following diversity and algorithmic bubbles. MVP would upload followers.json for analysis. But Instagram's API makes it nearly impossible to get that data publicly. And honestly? People like their bubbles.
+            <p className="text-base mb-sm">
+              <strong className="text-cyan">What I learned:</strong> <span className="opacity-70">Great concept - "Spotify Wrapped for your social bubble." Analyze Instagram following diversity and algorithmic bubbles. MVP would upload followers.json for analysis. But Instagram's API makes it nearly impossible to get that data publicly. And honestly? People like their bubbles.</span>
             </p>
-            <p style={{color: '#cbd5e0', fontStyle: 'italic', opacity: 0.8}}>
+            <p className="text-base italic opacity-70">
               <strong>Status:</strong> Good idea, wrong platform, wrong time.
             </p>
           </div>
 
-          <div style={{textAlign: 'center', padding: '3rem 0'}}>
-            <p style={{color: '#cbd5e0', fontSize: '1.2rem', fontStyle: 'italic'}}>
+          <div className="text-center mt-xl">
+            <p className="text-xl italic mb-md">
               "The graveyard is big, but the things that survive are worth it."
             </p>
-            <p style={{color: '#718096', marginTop: '1rem'}}>
+            <p className="text-base opacity-70">
               More tombstones coming soon as I build and abandon things at speed.
             </p>
           </div>
