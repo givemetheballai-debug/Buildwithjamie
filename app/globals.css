@@ -466,7 +466,7 @@ body {
 .resource-hero {
   padding: var(--space-2xl) var(--space-lg);
   margin-top: 70px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--accent-gradient);
   color: white;
   text-align: center;
 }
@@ -487,7 +487,7 @@ body {
   border-radius: var(--radius-lg);
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   margin-bottom: var(--space-lg);
-  border-left: 4px solid #667eea;
+  border-left: 4px solid var(--accent-cyan);
 }
 
 .resource-card h2 {
@@ -496,7 +496,7 @@ body {
   font-weight: 700;
   margin-bottom: var(--space-md);
   padding-bottom: var(--space-sm);
-  border-bottom: 3px solid #667eea;
+  border-bottom: 3px solid var(--accent-cyan);
 }
 
 .resource-card h3 {
@@ -547,7 +547,7 @@ body {
   background: #f8f9fa;
   padding: var(--space-md);
   border-radius: var(--radius-md);
-  border-left: 4px solid #667eea;
+  border-left: 4px solid var(--accent-cyan);
 }
 
 .tool-item h4 {
@@ -598,7 +598,7 @@ body {
   background: #e8f4f8;
   padding: var(--space-md);
   border-radius: var(--radius-md);
-  border-left: 4px solid #667eea;
+  border-left: 4px solid var(--accent-cyan);
   margin-top: var(--space-lg);
 }
 
