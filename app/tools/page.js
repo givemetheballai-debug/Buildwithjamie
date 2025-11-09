@@ -1,5 +1,6 @@
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
+import Link from 'next/link'
 
 export default function Tools() {
   return (
@@ -7,36 +8,25 @@ export default function Tools() {
       <Navigation />
       
       {/* Hero */}
-      <div style={{
-        marginTop: '70px',
-        padding: '4rem 2rem',
-        textAlign: 'center',
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-        color: 'white'
-      }}>
-        <h1 style={{fontSize: '3rem', marginBottom: '1rem'}}>Tools</h1>
-        <p style={{fontSize: '1.2rem'}}>Interactive tools to help you build with AI</p>
-      </div>
+      <section className="section-hero text-center bg-gradient">
+        <div className="container">
+          <h1 className="text-5xl font-bold mb-md">Tools</h1>
+          <p className="text-xl">Interactive tools to help you build with AI</p>
+        </div>
+      </section>
 
       {/* Coming Soon */}
-      <section style={{padding: '4rem 2rem'}}>
-        <div style={{maxWidth: '900px', margin: '0 auto', textAlign: 'center'}}>
+      <section className="section bg-secondary">
+        <div className="container container-md text-center">
           
-          <div style={{
-            padding: '3rem',
-            background: '#f7fafc',
-            borderRadius: '12px',
-            marginBottom: '2rem'
-          }}>
-            <div style={{fontSize: '4rem', marginBottom: '1rem'}}>🛠️</div>
-            <h2 style={{fontSize: '2rem', marginBottom: '1rem', color: '#2d3748'}}>
-              Coming Soon
-            </h2>
-            <p style={{fontSize: '1.1rem', color: '#718096', marginBottom: '2rem'}}>
+          <div className="card">
+            <div className="text-6xl mb-md">🛠️</div>
+            <h2 className="text-4xl font-bold mb-md">Coming Soon</h2>
+            <p className="text-lg opacity-70 mb-lg">
               Building interactive tools like prompt builders, AI workflows, and more.
             </p>
-            <p style={{color: '#4a5568'}}>
-              In the meantime, check out the <a href="/resources" style={{color: '#667eea', textDecoration: 'underline'}}>Resources page</a> for templates and guides.
+            <p className="text-base opacity-70">
+              In the meantime, check out the <Link href="/resources" className="text-cyan no-underline">Resources page</Link> for templates and guides.
             </p>
           </div>
 
