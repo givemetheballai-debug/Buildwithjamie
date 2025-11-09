@@ -8,372 +8,365 @@ export default function Home() {
     <>
       <Navigation />
       
-      {/* Hero Section */}
+      {/* Stats Hero Section */}
       <div style={{
         marginTop: '70px',
-        padding: '2.5rem 2rem',
+        padding: '3rem 2rem',
         background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
         color: 'white',
         textAlign: 'center'
       }}>
-        <h1 style={{fontSize: '3rem', marginBottom: '0.75rem', fontWeight: '700'}}>
-          Hey, it's your friend, Jamie.
-        </h1>
-        <p style={{fontSize: '1.5rem', marginBottom: '1.5rem', opacity: '0.95', lineHeight: '1.6'}}>
-          I use AI. A lot. And I make it make sense. No tech bro BS.
-        </p>
-        
-        {/* Credentials */}
-        <div style={{
-          maxWidth: '800px',
-          margin: '2rem auto 0',
-          fontSize: '1.1rem',
-          lineHeight: '1.8'
-        }}>
-          <p style={{marginBottom: '0.75rem'}}>
-            15+ years in marketing and advertising. Early adopter who builds real things.
-          </p>
-          <p style={{fontStyle: 'italic', opacity: '0.9', fontSize: '1rem'}}>
-            Award-winning marketer (Future Media 100, Global Innovation winner). Built a women's sports site using AI.
+        <div style={{maxWidth: '1000px', margin: '0 auto'}}>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            gap: '2rem',
+            marginBottom: '2rem'
+          }}>
+            <div>
+              <h2 style={{fontSize: '3.5rem', fontWeight: '700', marginBottom: '0.5rem', lineHeight: '1'}}>48%</h2>
+              <p style={{fontSize: '1.1rem', opacity: '0.95'}}>Don't know how to use AI effectively</p>
+            </div>
+            <div>
+              <h2 style={{fontSize: '3.5rem', fontWeight: '700', marginBottom: '0.5rem', lineHeight: '1'}}>63%</h2>
+              <p style={{fontSize: '1.1rem', opacity: '0.95'}}>Don't see AI as relevant to their work</p>
+            </div>
+            <div>
+              <h2 style={{fontSize: '3.5rem', fontWeight: '700', marginBottom: '0.5rem', lineHeight: '1'}}>25%</h2>
+              <p style={{fontSize: '1.1rem', opacity: '0.95'}}>Of AI projects actually deliver ROI</p>
+            </div>
+          </div>
+          
+          <h1 style={{fontSize: '2.5rem', fontWeight: '700', marginBottom: '1rem', lineHeight: '1.2'}}>
+            I help you cut through the confusion.
+          </h1>
+          <p style={{fontSize: '1.3rem', opacity: '0.95', lineHeight: '1.6'}}>
+            No tech bro BS. Just what actually works.
           </p>
         </div>
       </div>
 
-      {/* Email Signup - Top */}
-      <section style={{padding: '2.5rem 2rem', background: 'white'}}>
-        <div style={{
-          maxWidth: '600px',
-          margin: '0 auto',
-          textAlign: 'center',
-          padding: '2rem 1.5rem',
-          background: 'linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%)',
-          borderRadius: '12px',
-          border: '2px solid #e2e8f0'
-        }}>
-          <h2 style={{fontSize: '2rem', marginBottom: '0.75rem', color: '#2d3748'}}>
-            📰 The Daily AI (Coming Soon)
-          </h2>
-          <p style={{fontSize: '1.1rem', color: '#4a5568', marginBottom: '1.5rem', lineHeight: '1.6'}}>
-            Your morning briefing on AI, markets, and what matters. Smart insights without the jargon.
+      {/* Credibility Strip */}
+      <section style={{padding: '2rem', background: '#2d3748', color: 'white', textAlign: 'center'}}>
+        <div style={{maxWidth: '900px', margin: '0 auto'}}>
+          <p style={{fontSize: '1.2rem', lineHeight: '1.6'}}>
+            15 years managing $200M+ product portfolios. Built brands at Nielsen and Kantar. Now building companies with AI as my advantage.
           </p>
-          <form style={{display: 'flex', gap: '0.75rem', maxWidth: '400px', margin: '0 auto'}}>
-            <input 
-              type="email" 
-              placeholder="Enter your email"
-              style={{
-                flex: 1,
-                padding: '0.75rem 1rem',
-                borderRadius: '6px',
-                border: '1px solid #cbd5e0',
-                fontSize: '1rem'
-              }}
-            />
-            <button style={{
-              padding: '0.75rem 1.5rem',
-              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-              color: 'white',
-              border: 'none',
-              borderRadius: '6px',
-              fontSize: '1rem',
-              fontWeight: '600',
-              cursor: 'pointer'
-            }}>
-              Join the Waitlist
-            </button>
-          </form>
         </div>
       </section>
 
-      {/* Start Here Section */}
+      {/* Main Content - Bento Grid */}
       <section style={{padding: '2.5rem 2rem', background: '#f7fafc'}}>
-        <div style={{maxWidth: '900px', margin: '0 auto'}}>
-          <h2 style={{fontSize: '2rem', marginBottom: '1.5rem', textAlign: 'center', color: '#2d3748'}}>
+        <div style={{maxWidth: '1200px', margin: '0 auto'}}>
+          
+          {/* Featured Resources - Bento Style */}
+          <h2 style={{fontSize: '2.5rem', fontWeight: '700', marginBottom: '2rem', color: '#2d3748'}}>
             Start Here
           </h2>
+          
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '1rem'
+            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+            gap: '1.5rem',
+            marginBottom: '3rem'
           }}>
+            {/* Intro to AI - Large Block */}
             <a href="/resources/explainers" style={{
-              padding: '1.5rem',
+              padding: '2.5rem',
               background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
               color: 'white',
-              borderRadius: '8px',
+              borderRadius: '12px',
               textDecoration: 'none',
-              transition: 'transform 0.2s',
-              display: 'block'
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              minHeight: '280px',
+              transition: 'transform 0.2s, box-shadow 0.2s',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
             }}
-            onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-4px)'}
-            onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
-              <div style={{fontSize: '2rem', marginBottom: '0.75rem'}}>🎓</div>
-              <h3 style={{fontSize: '1.3rem', marginBottom: '0.5rem', fontWeight: '600'}}>Intro to AI</h3>
-              <p style={{opacity: '0.9'}}>Absolute beginner? Go here first</p>
-            </a>
-
-            <a href="/blog/5-problems" style={{
-              padding: '1.5rem',
-              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-              color: 'white',
-              borderRadius: '8px',
-              textDecoration: 'none',
-              transition: 'transform 0.2s',
-              display: 'block'
+            onMouseOver={(e) => {
+              e.currentTarget.style.transform = 'translateY(-4px)';
+              e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.15)';
             }}
-            onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-4px)'}
-            onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
-              <div style={{fontSize: '2rem', marginBottom: '0.75rem'}}>🔧</div>
-              <h3 style={{fontSize: '1.3rem', marginBottom: '0.5rem', fontWeight: '600'}}>5 Common Problems</h3>
-              <p style={{opacity: '0.9'}}>Blog post: Using AI but frustrated? Read this</p>
-            </a>
-
-            <a href="/resources/prompts" style={{
-              padding: '1.5rem',
-              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-              color: 'white',
-              borderRadius: '8px',
-              textDecoration: 'none',
-              transition: 'transform 0.2s',
-              display: 'block'
-            }}
-            onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-4px)'}
-            onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
-              <div style={{fontSize: '2rem', marginBottom: '0.75rem'}}>💬</div>
-              <h3 style={{fontSize: '1.3rem', marginBottom: '0.5rem', fontWeight: '600'}}>Prompt Library</h3>
-              <p style={{opacity: '0.9'}}>Ready to level up? Grab these</p>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* 3 AI Uses Section */}
-      <section style={{padding: '2.5rem 2rem', background: 'white'}}>
-        <div style={{maxWidth: '900px', margin: '0 auto'}}>
-          <h2 style={{fontSize: '2.5rem', marginBottom: '0.75rem', textAlign: 'center', color: '#2d3748'}}>
-            3 Things You Should Be Using AI For Right Now
-          </h2>
-          <p style={{textAlign: 'center', color: '#718096', marginBottom: '2rem', fontSize: '1.1rem'}}>
-            Stop overthinking it. Start here.
-          </p>
-
-          {/* Use Case 1 */}
-          <div style={{
-            background: '#f7fafc',
-            padding: '1.5rem',
-            borderRadius: '12px',
-            marginBottom: '1rem',
-            boxShadow: '0 4px 12px rgba(0,0,0,0.08)'
-          }}>
-            <h3 style={{fontSize: '1.8rem', marginBottom: '0.75rem', color: '#2d3748'}}>
-              1. Writing & Content
-            </h3>
-            <p style={{fontSize: '1.1rem', lineHeight: '1.8', color: '#4a5568'}}>
-              Write it yourself first. Then let AI punch it up. Change the tone. Adapt it for LinkedIn, a blog, Instagram. Same idea, different audiences. Stop starting from scratch every time.
-            </p>
-          </div>
-
-          {/* Use Case 2 */}
-          <div style={{
-            background: '#f7fafc',
-            padding: '1.5rem',
-            borderRadius: '12px',
-            marginBottom: '1rem',
-            boxShadow: '0 4px 12px rgba(0,0,0,0.08)'
-          }}>
-            <h3 style={{fontSize: '1.8rem', marginBottom: '0.75rem', color: '#2d3748'}}>
-              2. Research & Learning
-            </h3>
-            <p style={{fontSize: '1.1rem', lineHeight: '1.8', color: '#4a5568'}}>
-              Need to understand a new topic fast? AI synthesizes information way faster than you scrolling through 10 articles. Get the basics in 5 minutes, then decide where to dig deeper.
-            </p>
-          </div>
-
-          {/* Use Case 3 */}
-          <div style={{
-            background: '#f7fafc',
-            padding: '1.5rem',
-            borderRadius: '12px',
-            marginBottom: '1rem',
-            boxShadow: '0 4px 12px rgba(0,0,0,0.08)'
-          }}>
-            <h3 style={{fontSize: '1.8rem', marginBottom: '0.75rem', color: '#2d3748'}}>
-              3. Life Planning
-            </h3>
-            <p style={{fontSize: '1.1rem', lineHeight: '1.8', color: '#4a5568'}}>
-              Stuck on a career move? Big decision? AI can map out scenarios, play devil's advocate, ask you the hard questions. It's like having a thinking partner who never gets tired of your bullshit.
-            </p>
-          </div>
-
-          {/* More Uses */}
-          <div style={{
-            textAlign: 'center',
-            padding: '1.5rem',
-            background: '#f7fafc',
-            borderRadius: '12px',
-            boxShadow: '0 4px 12px rgba(0,0,0,0.08)'
-          }}>
-            <p style={{fontSize: '1.1rem', color: '#718096', marginBottom: '1rem'}}>
-              <strong>More ways to use it:</strong> Resume help, job search strategy, data analysis, brainstorming... basically anything that makes you go "ugh I don't want to think about this alone."
-            </p>
-            <a href="/blog/3-things" style={{
-              display: 'inline-block',
-              padding: '0.75rem 2rem',
-              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-              color: 'white',
-              borderRadius: '6px',
-              textDecoration: 'none',
-              fontWeight: '600',
-              marginTop: '0.5rem'
+            onMouseOut={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
             }}>
-              Read the full guide →
+              <div>
+                <div style={{fontSize: '3rem', marginBottom: '1rem'}}>🎓</div>
+                <h3 style={{fontSize: '2rem', fontWeight: '700', marginBottom: '1rem'}}>Intro to AI</h3>
+                <p style={{fontSize: '1.2rem', opacity: '0.95', lineHeight: '1.6'}}>
+                  For the 48% who don't know where to start. Clear, practical guidance.
+                </p>
+              </div>
+              <div style={{fontSize: '1.1rem', fontWeight: '600', marginTop: '1rem'}}>Start learning →</div>
+            </a>
+
+            {/* Prompt Library */}
+            <a href="/resources/prompts" style={{
+              padding: '2rem',
+              background: 'white',
+              color: '#2d3748',
+              borderRadius: '12px',
+              textDecoration: 'none',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              transition: 'transform 0.2s, box-shadow 0.2s',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
+              border: '2px solid #e2e8f0'
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.transform = 'translateY(-4px)';
+              e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.12)';
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.08)';
+            }}>
+              <div>
+                <div style={{fontSize: '2.5rem', marginBottom: '0.75rem'}}>💬</div>
+                <h3 style={{fontSize: '1.5rem', fontWeight: '700', marginBottom: '0.75rem'}}>Prompt Library</h3>
+                <p style={{fontSize: '1rem', color: '#4a5568', lineHeight: '1.6'}}>
+                  Copy-paste prompts that actually work. No fluff.
+                </p>
+              </div>
+              <div style={{fontSize: '1rem', fontWeight: '600', color: '#667eea', marginTop: '1rem'}}>Get prompts →</div>
+            </a>
+
+            {/* Context Template */}
+            <a href="/resources/context-template" style={{
+              padding: '2rem',
+              background: 'white',
+              color: '#2d3748',
+              borderRadius: '12px',
+              textDecoration: 'none',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              transition: 'transform 0.2s, box-shadow 0.2s',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
+              border: '2px solid #e2e8f0'
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.transform = 'translateY(-4px)';
+              e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.12)';
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.08)';
+            }}>
+              <div>
+                <div style={{fontSize: '2.5rem', marginBottom: '0.75rem'}}>📄</div>
+                <h3 style={{fontSize: '1.5rem', fontWeight: '700', marginBottom: '0.75rem'}}>Context Template</h3>
+                <p style={{fontSize: '1rem', color: '#4a5568', lineHeight: '1.6'}}>
+                  Stop repeating yourself. Make AI remember.
+                </p>
+              </div>
+              <div style={{fontSize: '1rem', fontWeight: '600', color: '#667eea', marginTop: '1rem'}}>Download →</div>
             </a>
           </div>
-        </div>
-      </section>
 
-      {/* Latest from the Blog */}
-      <section style={{padding: '2.5rem 2rem', background: '#f7fafc'}}>
-        <div style={{maxWidth: '900px', margin: '0 auto'}}>
-          <h2 style={{fontSize: '2rem', marginBottom: '1.5rem', textAlign: 'center', color: '#2d3748'}}>
-            Latest from the Blog
+          {/* Latest Thinking */}
+          <h2 style={{fontSize: '2.5rem', fontWeight: '700', marginBottom: '2rem', color: '#2d3748'}}>
+            Latest Thinking
           </h2>
+          
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '1rem'
+            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+            gap: '1.5rem',
+            marginBottom: '3rem'
           }}>
             <a href="/blog/5-problems" style={{
-              padding: '1.5rem',
+              padding: '2rem',
               background: 'white',
-              borderRadius: '8px',
+              borderRadius: '12px',
               textDecoration: 'none',
               color: '#2d3748',
               boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
               transition: 'transform 0.2s',
-              display: 'block'
+              border: '2px solid #e2e8f0'
             }}
             onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-4px)'}
             onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
-              <h3 style={{fontSize: '1.3rem', marginBottom: '0.5rem', fontWeight: '600'}}>5 Problems Everyone Has With AI</h3>
-              <p style={{color: '#718096'}}>And how to fix them</p>
+              <div style={{
+                fontSize: '0.875rem',
+                color: '#667eea',
+                fontWeight: '600',
+                marginBottom: '0.75rem',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em'
+              }}>BLOG</div>
+              <h3 style={{fontSize: '1.5rem', fontWeight: '700', marginBottom: '0.75rem', lineHeight: '1.3'}}>
+                5 Problems Everyone Has With AI (And How to Fix Them)
+              </h3>
+              <p style={{color: '#718096', lineHeight: '1.6'}}>
+                The real barriers to AI adoption—and the practical solutions that actually work.
+              </p>
             </a>
-          </div>
-          <div style={{textAlign: 'center', marginTop: '1.5rem'}}>
-            <a href="/blog" style={{
-              color: '#667eea',
-              fontSize: '1.1rem',
+
+            <a href="/blog/enterprise-ai" style={{
+              padding: '2rem',
+              background: 'white',
+              borderRadius: '12px',
               textDecoration: 'none',
-              fontWeight: '600'
-            }}>
-              See all posts →
+              color: '#2d3748',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
+              transition: 'transform 0.2s',
+              border: '2px solid #e2e8f0'
+            }}
+            onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-4px)'}
+            onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
+              <div style={{
+                fontSize: '0.875rem',
+                color: '#667eea',
+                fontWeight: '600',
+                marginBottom: '0.75rem',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em'
+              }}>COMING SOON</div>
+              <h3 style={{fontSize: '1.5rem', fontWeight: '700', marginBottom: '0.75rem', lineHeight: '1.3'}}>
+                Why 75% of AI Projects Fail
+              </h3>
+              <p style={{color: '#718096', lineHeight: '1.6'}}>
+                I've seen this at scale. Here's what companies get wrong about AI adoption.
+              </p>
+            </a>
+
+            <a href="/blog" style={{
+              padding: '2rem',
+              background: 'linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%)',
+              borderRadius: '12px',
+              textDecoration: 'none',
+              color: '#2d3748',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontSize: '1.2rem',
+              fontWeight: '600',
+              transition: 'transform 0.2s',
+              border: '2px solid #e2e8f0'
+            }}
+            onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-4px)'}
+            onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
+              View all posts →
             </a>
           </div>
+
+          {/* What I'm Building */}
+          <h2 style={{fontSize: '2.5rem', fontWeight: '700', marginBottom: '1rem', color: '#2d3748'}}>
+            What I'm Building
+          </h2>
+          <p style={{fontSize: '1.1rem', color: '#718096', marginBottom: '2rem'}}>
+            I don't just teach—I build. Here's what I'm working on.
+          </p>
+          
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: '1rem',
+            marginBottom: '3rem'
+          }}>
+            <div style={{
+              padding: '1.5rem',
+              background: 'white',
+              borderRadius: '12px',
+              border: '2px solid #e2e8f0'
+            }}>
+              <h3 style={{fontSize: '1.3rem', fontWeight: '700', marginBottom: '0.5rem', color: '#2d3748'}}>
+                givemetheball.com
+              </h3>
+              <p style={{fontSize: '0.95rem', color: '#718096', lineHeight: '1.6'}}>
+                Women's sports + leadership platform. Live scores, newsletters, built with AI.
+              </p>
+            </div>
+
+            <div style={{
+              padding: '1.5rem',
+              background: 'white',
+              borderRadius: '12px',
+              border: '2px solid #e2e8f0'
+            }}>
+              <h3 style={{fontSize: '1.3rem', fontWeight: '700', marginBottom: '0.5rem', color: '#2d3748'}}>
+                Fancy Lazy Travel
+              </h3>
+              <p style={{fontSize: '0.95rem', color: '#718096', lineHeight: '1.6'}}>
+                3K+ Instagram followers. Testing ad strategies in real-time.
+              </p>
+            </div>
+
+            <div style={{
+              padding: '1.5rem',
+              background: 'white',
+              borderRadius: '12px',
+              border: '2px solid #e2e8f0'
+            }}>
+              <h3 style={{fontSize: '1.3rem', fontWeight: '700', marginBottom: '0.5rem', color: '#2d3748'}}>
+                The Daily AI
+              </h3>
+              <p style={{fontSize: '0.95rem', color: '#718096', lineHeight: '1.6'}}>
+                Morning briefing on AI, markets, culture. Launching Q1 2026.
+              </p>
+            </div>
+          </div>
+
         </div>
       </section>
 
-      {/* Featured Resource - Context Template */}
-      <section style={{padding: '2.5rem 2rem', background: 'white'}}>
-        <div style={{maxWidth: '900px', margin: '0 auto'}}>
-          <h2 style={{fontSize: '2rem', marginBottom: '1.5rem', textAlign: 'center', color: '#2d3748'}}>
-            Featured Resource
+      {/* Newsletter CTA - Full Width */}
+      <section style={{
+        padding: '3rem 2rem',
+        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        color: 'white'
+      }}>
+        <div style={{maxWidth: '700px', margin: '0 auto', textAlign: 'center'}}>
+          <h2 style={{fontSize: '2.5rem', fontWeight: '700', marginBottom: '1rem'}}>
+            📰 The Daily AI
           </h2>
-          <div style={{
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            padding: '2rem',
-            borderRadius: '12px',
-            color: 'white',
-            textAlign: 'center'
+          <p style={{fontSize: '1.2rem', marginBottom: '2rem', opacity: '0.95', lineHeight: '1.6'}}>
+            Cut through the noise. Get the signal. Every morning, straight to your inbox—AI, tech, markets, culture, leadership.
+          </p>
+          <form style={{
+            display: 'flex',
+            gap: '1rem',
+            maxWidth: '500px',
+            margin: '0 auto',
+            flexWrap: 'wrap',
+            justifyContent: 'center'
           }}>
-            <div style={{fontSize: '3rem', marginBottom: '0.75rem'}}>📄</div>
-            <h3 style={{fontSize: '2rem', marginBottom: '0.75rem', fontWeight: '600'}}>AI Context Template</h3>
-            <p style={{fontSize: '1.2rem', marginBottom: '1.5rem', opacity: '0.95', lineHeight: '1.6'}}>
-              Stop repeating yourself. This template helps AI remember who you are, what you do, and how you work—so every conversation starts smarter.
-            </p>
-            <a href="/resources/context-template" style={{
-              display: 'inline-block',
+            <input 
+              type="email" 
+              placeholder="Your email"
+              style={{
+                flex: '1 1 300px',
+                padding: '1rem 1.5rem',
+                borderRadius: '8px',
+                border: 'none',
+                fontSize: '1rem',
+                minWidth: '250px'
+              }}
+            />
+            <button style={{
               padding: '1rem 2rem',
               background: 'white',
               color: '#667eea',
-              borderRadius: '6px',
-              textDecoration: 'none',
-              fontWeight: '600',
-              fontSize: '1.1rem',
+              border: 'none',
+              borderRadius: '8px',
+              fontSize: '1rem',
+              fontWeight: '700',
+              cursor: 'pointer',
+              whiteSpace: 'nowrap',
               transition: 'transform 0.2s'
             }}
             onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
             onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}>
-              Get the Template
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Email Signup - Bottom */}
-      <section style={{padding: '2.5rem 2rem', background: '#f7fafc'}}>
-        <div style={{
-          maxWidth: '600px',
-          margin: '0 auto',
-          textAlign: 'center',
-          padding: '2rem 1.5rem',
-          background: 'white',
-          borderRadius: '12px',
-          border: '2px solid #e2e8f0'
-        }}>
-          <h2 style={{fontSize: '2rem', marginBottom: '0.75rem', color: '#2d3748'}}>
-            📰 The Daily AI (Coming Soon)
-          </h2>
-          <p style={{fontSize: '1.1rem', color: '#4a5568', marginBottom: '1.5rem', lineHeight: '1.6'}}>
-            Your morning briefing on AI, markets, and what matters. Smart insights without the jargon.
-          </p>
-          <form style={{display: 'flex', gap: '0.75rem', maxWidth: '400px', margin: '0 auto'}}>
-            <input 
-              type="email" 
-              placeholder="Enter your email"
-              style={{
-                flex: 1,
-                padding: '0.75rem 1rem',
-                borderRadius: '6px',
-                border: '1px solid #cbd5e0',
-                fontSize: '1rem'
-              }}
-            />
-            <button style={{
-              padding: '0.75rem 1.5rem',
-              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-              color: 'white',
-              border: 'none',
-              borderRadius: '6px',
-              fontSize: '1rem',
-              fontWeight: '600',
-              cursor: 'pointer'
-            }}>
               Join the Waitlist
             </button>
           </form>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section style={{padding: '2.5rem 2rem', background: 'white', textAlign: 'center'}}>
-        <div style={{maxWidth: '600px', margin: '0 auto'}}>
-          <h2 style={{fontSize: '2rem', marginBottom: '1rem', color: '#2d3748'}}>
-            Ready to dive deeper?
-          </h2>
-          <a href="/resources" style={{
-            display: 'inline-block',
-            padding: '1rem 2.5rem',
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            color: 'white',
-            borderRadius: '6px',
-            textDecoration: 'none',
-            fontWeight: '600',
-            fontSize: '1.2rem',
-            transition: 'transform 0.2s'
-          }}
-          onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-          onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}>
-            Explore All Resources
-          </a>
+          <p style={{fontSize: '0.9rem', marginTop: '1rem', opacity: '0.85'}}>
+            Launching Q1 2026. Be first in line.
+          </p>
         </div>
       </section>
 
