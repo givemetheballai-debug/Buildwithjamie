@@ -153,18 +153,18 @@ export default function Home() {
                 {/* Image placeholder - replace emoji with actual icon later */}
                 <div className="media-placeholder" style={{
                   fontSize: '3rem', 
-                  marginBottom: '1rem'
+                  marginBottom: '1.5rem'
                 }} aria-hidden="true">
                   🎓
                 </div>
-                <h3 style={{fontSize: '2rem', fontWeight: '700', marginBottom: '1rem'}}>
+                <h3 style={{fontSize: '2rem', fontWeight: '700', marginBottom: '1.5rem'}}>
                   Intro to AI
                 </h3>
-                <p style={{fontSize: '1.2rem', opacity: '0.95', lineHeight: '1.6'}}>
+                <p style={{fontSize: '1.2rem', opacity: '0.95', lineHeight: '1.6', marginBottom: '0'}}>
                   For the 48% who don't know where to start. Clear, practical guidance.
                 </p>
               </div>
-              <div style={{fontSize: '1.1rem', fontWeight: '600', marginTop: '1rem'}}>
+              <div style={{fontSize: '1.1rem', fontWeight: '600', marginTop: '2rem', paddingTop: '1rem', borderTop: '1px solid rgba(255,255,255,0.2)'}}>
                 Start learning →
               </div>
             </a>
