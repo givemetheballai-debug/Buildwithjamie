@@ -6,6 +6,8 @@ import { useState } from 'react'
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
 
+  const closeMenu = () => setIsOpen(false)
+
   return (
     <nav style={{
       background: 'rgba(255, 255, 255, 0.95)',
@@ -26,7 +28,7 @@ export default function Navigation() {
         alignItems: 'center'
       }}>
         {/* Logo */}
-        <Link href="/" style={{
+        <Link href="/" onClick={closeMenu} style={{
           fontSize: '1.5rem',
           fontWeight: '700',
           background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
@@ -56,11 +58,10 @@ export default function Navigation() {
 
         {/* Desktop Navigation */}
         <div style={{
-          display: 'flex',
           gap: '2rem',
           alignItems: 'center'
         }} className={`nav-links ${isOpen ? 'active' : ''}`}>
-          <Link href="/" style={{
+          <Link href="/" onClick={closeMenu} style={{
             color: '#4a5568',
             textDecoration: 'none',
             fontWeight: '500',
@@ -71,7 +72,7 @@ export default function Navigation() {
             Home
           </Link>
 
-          <Link href="/resources" style={{
+          <Link href="/resources" onClick={closeMenu} style={{
             color: '#4a5568',
             textDecoration: 'none',
             fontWeight: '500',
@@ -82,7 +83,7 @@ export default function Navigation() {
             Resources
           </Link>
 
-          <Link href="/blog" style={{
+          <Link href="/blog" onClick={closeMenu} style={{
             color: '#4a5568',
             textDecoration: 'none',
             fontWeight: '500',
@@ -93,7 +94,7 @@ export default function Navigation() {
             Blog
           </Link>
 
-          <Link href="/tools" style={{
+          <Link href="/tools" onClick={closeMenu} style={{
             color: '#4a5568',
             textDecoration: 'none',
             fontWeight: '500',
@@ -104,7 +105,7 @@ export default function Navigation() {
             Tools
           </Link>
 
-          <Link href="/projects" style={{
+          <Link href="/projects" onClick={closeMenu} style={{
             color: '#4a5568',
             textDecoration: 'none',
             fontWeight: '500',
@@ -115,7 +116,7 @@ export default function Navigation() {
             Projects
           </Link>
 
-          <Link href="/about" style={{
+          <Link href="/about" onClick={closeMenu} style={{
             color: '#4a5568',
             textDecoration: 'none',
             fontWeight: '500',
@@ -129,6 +130,10 @@ export default function Navigation() {
       </div>
 
       <style jsx global>{`
+        .nav-links {
+          display: flex;
+        }
+        
         @media (max-width: 768px) {
           .mobile-menu-btn {
             display: block !important;
