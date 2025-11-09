@@ -193,7 +193,7 @@ export default function IntroToAI() {
             <p className="text-lg mb-lg opacity-70">
               Download the context template to maintain continuity across AI sessions.
             </p>
-            <Link href="/resources" className="btn btn-lg no-underline" style={{background: 'white', color: '#667eea'}}>
+            <Link href="/resources" className="btn btn-lg no-underline" style={{background: 'white', color: '#00f2ea'}}>
               Get Free Resources
             </Link>
           </div>
