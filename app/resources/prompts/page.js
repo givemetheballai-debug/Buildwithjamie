@@ -182,9 +182,9 @@ export default function PromptLibrary() {
       </section>
 
       {/* Tips Section */}
-      <section className="section-sm" style={{background: '#f7fafc'}}>
+      <section style={{padding: '2rem 2rem 1rem 2rem', background: '#f7fafc'}}>
         <div className="resource-wrapper">
-          <h2 className="text-3xl font-bold mb-lg text-center" style={{color: '#2d3748'}}>
+          <h2 className="text-3xl font-bold mb-md text-center" style={{color: '#2d3748'}}>
             How to Use These Prompts
           </h2>
           
@@ -220,16 +220,16 @@ export default function PromptLibrary() {
       </section>
 
       {/* Prompts by Category */}
-      <section className="section-sm" style={{background: '#f7fafc'}}>
+      <section style={{padding: '1.5rem 2rem 3rem 2rem', background: '#f7fafc'}}>
         <div style={{maxWidth: '1100px', margin: '0 auto'}}>
           {categories.map((category) => (
-            <div key={category.id} className="mb-xl">
+            <div key={category.id} className="mb-lg">
               {/* Category Header */}
               <div style={{
                 display: 'flex',
                 alignItems: 'center',
-                marginBottom: '1.5rem',
-                paddingBottom: '0.75rem',
+                marginBottom: '1rem',
+                paddingBottom: '0.5rem',
                 borderBottom: '3px solid var(--accent-cyan)'
               }}>
                 <div className="text-4xl" style={{marginRight: '1rem'}}>{category.icon}</div>
