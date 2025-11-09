@@ -21,10 +21,10 @@ export default function About() {
 
       {/* Main Content */}
       <section className="section bg-secondary">
-        <div className="container" style={{maxWidth: '900px'}}>
+        <div className="container content-narrow">
           
           {/* Story Intro */}
-          <div className="text-lg mb-xl" style={{lineHeight: '1.8'}}>
+          <div className="text-lg mb-xl line-height-relaxed">
             <p className="mb-md">
               I spent 15+ years at market research companies working with Fortune 500 brands on advertising and consumer insights. Built products that helped companies understand their audiences.
             </p>
@@ -63,7 +63,7 @@ export default function About() {
           </div>
 
           {/* What I'm Doing */}
-          <div className="text-lg mb-xl" style={{lineHeight: '1.8'}}>
+          <div className="text-lg mb-xl line-height-relaxed">
             <p className="mb-md">
               <strong className="text-cyan">What I'm doing now:</strong>
             </p>
@@ -85,14 +85,14 @@ export default function About() {
             
             <div className="card mb-md">
               <h3 className="text-2xl font-bold text-cyan mb-md">Kantar</h3>
-              <p className="text-base opacity-70" style={{lineHeight: '1.8'}}>
+              <p className="text-base opacity-70 line-height-relaxed">
                 Led Global Media and Innovation Product teams managing brand lift research across 60+ markets. Learned the full funnel of advertising - from awareness to conversion - and consulted Fortune 500 companies on ad strategy and creative effectiveness. Launched innovation research products and wrote thought leadership on branding, pricing strategy, and innovation. Named to The Media Leader's #Future100Club.
               </p>
             </div>
             
             <div className="card mb-md">
               <h3 className="text-2xl font-bold text-cyan mb-md">Nielsen</h3>
-              <p className="text-base opacity-70" style={{lineHeight: '1.8'}}>
+              <p className="text-base opacity-70 line-height-relaxed">
                 Spent over a decade growing from traditional market research into product leadership. Worked on e-commerce tracking in the early days of Amazon. Launched audience targeting products as programmatic advertising was taking off. Built API integrations across major platforms. Won Nielsen's Global Emerging Product Idea Award.
               </p>
             </div>
