@@ -132,7 +132,7 @@ export default function ContextTemplate() {
               Free. No email required. Start using it today.
             </p>
             <a 
-              href="/AI_Context_Template.docx" 
+              href="/Jamies_AI_Context_Template.docx" 
               download
               style={{
                 display: 'inline-block',
