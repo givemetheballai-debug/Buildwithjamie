@@ -19,6 +19,83 @@ export default function Resources() {
         <p style={{fontSize: '1.2rem'}}>Free tools to help you build with AI</p>
       </div>
 
+      {/* Featured: Intro to AI */}
+      <section style={{padding: '4rem 2rem', background: 'white', borderBottom: '2px solid #e2e8f0'}}>
+        <div style={{maxWidth: '900px', margin: '0 auto'}}>
+          <div style={{textAlign: 'center', marginBottom: '3rem'}}>
+            <div style={{fontSize: '3rem', marginBottom: '1rem'}}>🎓</div>
+            <h2 style={{fontSize: '2.5rem', marginBottom: '1rem', color: '#2d3748'}}>
+              Intro to AI
+            </h2>
+            <p style={{fontSize: '1.2rem', color: '#4a5568'}}>
+              Never used AI before? Start here.
+            </p>
+          </div>
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+            gap: '1.5rem',
+            marginBottom: '2rem'
+          }}>
+            <div style={{
+              padding: '1.5rem',
+              background: '#f7fafc',
+              borderRadius: '8px',
+              borderLeft: '4px solid #667eea'
+            }}>
+              <h3 style={{fontSize: '1.1rem', marginBottom: '0.5rem', color: '#2d3748'}}>What is AI?</h3>
+              <p style={{fontSize: '0.95rem', color: '#4a5568'}}>Plain English explanation of how AI actually works</p>
+            </div>
+            
+            <div style={{
+              padding: '1.5rem',
+              background: '#f7fafc',
+              borderRadius: '8px',
+              borderLeft: '4px solid #667eea'
+            }}>
+              <h3 style={{fontSize: '1.1rem', marginBottom: '0.5rem', color: '#2d3748'}}>Popular Tools</h3>
+              <p style={{fontSize: '0.95rem', color: '#4a5568'}}>ChatGPT vs Claude vs Gemini - which for what</p>
+            </div>
+            
+            <div style={{
+              padding: '1.5rem',
+              background: '#f7fafc',
+              borderRadius: '8px',
+              borderLeft: '4px solid #667eea'
+            }}>
+              <h3 style={{fontSize: '1.1rem', marginBottom: '0.5rem', color: '#2d3748'}}>Writing Prompts</h3>
+              <p style={{fontSize: '0.95rem', color: '#4a5568'}}>How to get better answers from AI</p>
+            </div>
+            
+            <div style={{
+              padding: '1.5rem',
+              background: '#f7fafc',
+              borderRadius: '8px',
+              borderLeft: '4px solid #667eea'
+            }}>
+              <h3 style={{fontSize: '1.1rem', marginBottom: '0.5rem', color: '#2d3748'}}>Tokens & RAG</h3>
+              <p style={{fontSize: '0.95rem', color: '#4a5568'}}>Key concepts that affect AI performance</p>
+            </div>
+          </div>
+
+          <div style={{textAlign: 'center'}}>
+            <Link href="/resources/explainers" style={{
+              display: 'inline-block',
+              padding: '1rem 2.5rem',
+              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+              color: 'white',
+              borderRadius: '8px',
+              textDecoration: 'none',
+              fontWeight: '600',
+              fontSize: '1.1rem'
+            }}>
+              Read the Full Guide →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Downloads Section */}
       <section style={{padding: '4rem 2rem', background: 'white'}}>
         <div style={{maxWidth: '900px', margin: '0 auto'}}>
@@ -100,7 +177,7 @@ export default function Resources() {
       <section style={{padding: '4rem 2rem', background: '#f7fafc'}}>
         <div style={{maxWidth: '900px', margin: '0 auto'}}>
           <h2 style={{fontSize: '2rem', marginBottom: '2rem', textAlign: 'center', color: '#2d3748'}}>
-            Learn More
+            Coming Soon
           </h2>
           
           <div style={{
@@ -108,25 +185,6 @@ export default function Resources() {
             gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
             gap: '2rem'
           }}>
-            {/* AI Explainers */}
-            <Link href="/resources/explainers" style={{
-              padding: '2rem',
-              background: 'white',
-              borderRadius: '12px',
-              textDecoration: 'none',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
-              transition: 'transform 0.2s',
-              display: 'block'
-            }}>
-              <div style={{fontSize: '2.5rem', marginBottom: '1rem'}}>🎓</div>
-              <h3 style={{fontSize: '1.5rem', marginBottom: '1rem', color: '#2d3748'}}>
-                AI Explainers
-              </h3>
-              <p style={{color: '#4a5568'}}>
-                Never used AI before? Start here. Practical tips from 6 months of heavy use.
-              </p>
-            </Link>
-
             {/* Prompt Library - Coming Soon */}
             <div style={{
               padding: '2rem',
