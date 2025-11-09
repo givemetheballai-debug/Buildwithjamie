@@ -309,7 +309,7 @@ export default function Home() {
                 The Daily AI
               </h3>
               <p style={{fontSize: '0.95rem', color: '#718096', lineHeight: '1.6'}}>
-                Morning briefing on AI, markets, culture. Launching Q1 2026.
+                Morning briefing on AI, markets, culture. Coming soon.
               </p>
             </div>
           </div>
@@ -368,7 +368,7 @@ export default function Home() {
             </button>
           </form>
           <p style={{fontSize: '0.9rem', marginTop: '1rem', opacity: '0.85'}}>
-            Launching Q1 2026. Be first in line.
+            Coming soon. Be first in line.
           </p>
         </div>
       </section>
