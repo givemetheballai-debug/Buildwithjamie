@@ -21,7 +21,7 @@ export default function ThreeThings() {
       <article className="article-content">
         <div className="article-wrapper">
           
-          <p style={{fontSize: '1.2rem', marginBottom: '3rem'}}>
+          <p className="article-intro">
             Everyone asks "what should I use AI for?" Here are three things that actually make your life easier—not gimmicks, not demos, just stuff that saves you time and mental energy.
           </p>
 
@@ -45,13 +45,13 @@ export default function ThreeThings() {
             </ul>
 
             <h3>Example prompts:</h3>
-            <div style={{background: '#f7fafc', padding: '1.5rem', borderRadius: '8px', marginBottom: '1rem'}}>
-              <p style={{marginBottom: 0, fontFamily: 'monospace', color: '#4a5568'}}>
+            <div className="prompt-box">
+              <p className="prompt-text">
                 "Here's my rough draft about [topic]. Rewrite it for LinkedIn—keep my main points but make it more professional and add a hook at the start."
               </p>
             </div>
-            <div style={{background: '#f7fafc', padding: '1.5rem', borderRadius: '8px', marginBottom: '1rem'}}>
-              <p style={{marginBottom: 0, fontFamily: 'monospace', color: '#4a5568'}}>
+            <div className="prompt-box">
+              <p className="prompt-text">
                 "Take this email and make it more direct. Cut the fluff but keep it friendly."
               </p>
             </div>
@@ -83,13 +83,13 @@ export default function ThreeThings() {
             </ul>
 
             <h3>Example prompts:</h3>
-            <div style={{background: '#f7fafc', padding: '1.5rem', borderRadius: '8px', marginBottom: '1rem'}}>
-              <p style={{marginBottom: 0, fontFamily: 'monospace', color: '#4a5568'}}>
+            <div className="prompt-box">
+              <p className="prompt-text">
                 "Explain [complex topic] like I'm smart but don't work in this field. Give me the 5 key concepts I need to understand to have an informed conversation about it."
               </p>
             </div>
-            <div style={{background: '#f7fafc', padding: '1.5rem', borderRadius: '8px', marginBottom: '1rem'}}>
-              <p style={{marginBottom: 0, fontFamily: 'monospace', color: '#4a5568'}}>
+            <div className="prompt-box">
+              <p className="prompt-text">
                 "What are the main debates around [topic]? Give me the strongest argument from each side."
               </p>
             </div>
@@ -121,18 +121,18 @@ export default function ThreeThings() {
             </ul>
 
             <h3>Example prompts:</h3>
-            <div style={{background: '#f7fafc', padding: '1.5rem', borderRadius: '8px', marginBottom: '1rem'}}>
-              <p style={{marginBottom: 0, fontFamily: 'monospace', color: '#4a5568'}}>
+            <div className="prompt-box">
+              <p className="prompt-text">
                 "I'm deciding between [Option A] and [Option B]. Ask me 5 questions that will help me figure out which one actually fits my life better."
               </p>
             </div>
-            <div style={{background: '#f7fafc', padding: '1.5rem', borderRadius: '8px', marginBottom: '1rem'}}>
-              <p style={{marginBottom: 0, fontFamily: 'monospace', color: '#4a5568'}}>
+            <div className="prompt-box">
+              <p className="prompt-text">
                 "Play devil's advocate on my plan to [do thing]. What am I not thinking about?"
               </p>
             </div>
-            <div style={{background: '#f7fafc', padding: '1.5rem', borderRadius: '8px', marginBottom: '1rem'}}>
-              <p style={{marginBottom: 0, fontFamily: 'monospace', color: '#4a5568'}}>
+            <div className="prompt-box">
+              <p className="prompt-text">
                 "Help me map out 3 different scenarios for [decision] and what each one might look like in 6 months, 1 year, and 3 years."
               </p>
             </div>
@@ -174,7 +174,7 @@ export default function ThreeThings() {
             <p>
               AI works best when you use it for stuff you're already doing—just faster and with less friction.
             </p>
-            <p style={{fontWeight: 600, fontSize: '1.2rem'}}>
+            <p className="article-emphasis">
               Start small. Build from there.
             </p>
           </section>
