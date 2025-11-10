@@ -535,6 +535,48 @@ body {
   flex-wrap: wrap;
 }
 
+/* Article text emphasis styles */
+.article-intro {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.article-intro-bold {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+.article-emphasis {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.article-conclusion {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+/* Prompt box styles */
+.prompt-box {
+  background: #f7fafc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.prompt-label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.prompt-text {
+  margin-bottom: 0;
+  font-family: monospace;
+  font-size: 1rem;
+  color: #4a5568;
+}
+
 /* ============================================
    RESOURCE PAGE STYLES
    ============================================ */
