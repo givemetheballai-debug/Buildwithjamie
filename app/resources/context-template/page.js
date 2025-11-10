@@ -104,7 +104,7 @@ export default function ContextTemplate() {
             </ul>
 
             <div className="example-box">
-              <p style={{fontStyle: 'italic'}}>
+              <p className="italic">
                 "I accidentally invented RAG (Retrieval-Augmented Generation) by creating my own context management system. This template is the result of that discovery - a practical tool anyone can use to get better AI results."
               </p>
             </div>
@@ -122,13 +122,7 @@ export default function ContextTemplate() {
             <a 
               href="/Jamies_AI_Context_Template.docx" 
               download
-              className="btn btn-lg no-underline"
-              style={{
-                background: 'white',
-                color: '#00f2ea',
-                fontSize: '1.1rem',
-                boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
-              }}
+              className="btn btn-lg btn-inverse no-underline btn-shadow"
             >
               Download Template →
             </a>
@@ -136,10 +130,10 @@ export default function ContextTemplate() {
 
           {/* Next Steps */}
           <div className="mt-lg text-center">
-            <p style={{color: '#4a5568', marginBottom: '1rem'}}>
+            <p className="text-secondary mb-md">
               Want to learn more about using AI effectively?
             </p>
-            <Link href="/resources/explainers" className="text-cyan text-xl" style={{textDecoration: 'underline'}}>
+            <Link href="/resources/explainers" className="text-cyan text-xl underline">
               Read the Intro to AI Guide
             </Link>
           </div>
