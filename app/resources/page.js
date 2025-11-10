@@ -12,7 +12,7 @@ export default function Resources() {
       <section className="section-hero text-center bg-primary border-bottom">
         <div className="container">
           <h1 className="text-5xl font-bold mb-md">AI Resources</h1>
-          <p className="text-xl opacity-70 mx-auto" style={{maxWidth: '700px'}}>
+          <p className="text-xl opacity-70 mx-auto max-w-700">
             Everything I've learned about using AI effectively. No fluff, no hype—just what actually works.
           </p>
         </div>
@@ -119,15 +119,14 @@ export default function Resources() {
           </div>
 
           {/* Premium Tier Placeholder - Hidden but ready */}
-          <div style={{display: 'none'}} className="bg-gradient rounded-lg text-center p-xl mb-xl">
+          <div className="hidden bg-gradient rounded-lg text-center p-xl mb-xl">
             <h2 className="text-4xl font-bold mb-md">Want More?</h2>
             <p className="text-xl opacity-70 mb-lg">
               Get access to advanced courses, exclusive templates, and monthly workshops.
             </p>
             <button 
-              className="btn btn-lg"
+              className="btn btn-lg btn-inverse"
               data-analytics="premium-upgrade-cta"
-              style={{background: 'white', color: '#000'}}
             >
               Upgrade to Premium
             </button>
@@ -147,8 +146,7 @@ export default function Resources() {
           <form 
             action="#" 
             method="POST"
-            className="form mx-auto"
-            style={{maxWidth: '500px', justifyContent: 'center'}}
+            className="form form-center mx-auto max-w-500"
             aria-label="Subscribe to newsletter"
             data-analytics="resources-newsletter-signup"
           >
