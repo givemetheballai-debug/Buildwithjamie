@@ -9,24 +9,24 @@ export default function Home() {
       <Navigation />
       
       {/* Stats Hero Section */}
-      <section className="section-hero text-center bg-primary">
+      <section className="section-hero text-center bg-primary hero-pattern">
         <div className="container">
-          <div className="grid grid-3 mb-xl mx-auto" style={{maxWidth: '1000px'}}>
-            <div>
-              <h2 className="text-gradient text-6xl font-bold mb-sm" style={{lineHeight: '1'}}>48%</h2>
+          <div className="grid grid-3 mb-xl mx-auto max-w-1000">
+            <div className="stat-card">
+              <h2 className="text-gradient text-6xl font-bold mb-sm stat-number">48%</h2>
               <p className="text-lg opacity-70">Don't know how to use AI effectively</p>
             </div>
-            <div>
-              <h2 className="text-gradient text-6xl font-bold mb-sm" style={{lineHeight: '1'}}>63%</h2>
+            <div className="stat-card">
+              <h2 className="text-gradient text-6xl font-bold mb-sm stat-number">63%</h2>
               <p className="text-lg opacity-70">Don't see AI as relevant to their work</p>
             </div>
-            <div>
-              <h2 className="text-gradient text-6xl font-bold mb-sm" style={{lineHeight: '1'}}>25%</h2>
+            <div className="stat-card">
+              <h2 className="text-gradient text-6xl font-bold mb-sm stat-number">25%</h2>
               <p className="text-lg opacity-70">Of AI projects actually deliver ROI</p>
             </div>
           </div>
           
-          <h1 className="text-4xl font-bold mb-md" style={{lineHeight: '1.2'}}>
+          <h1 className="text-4xl font-bold mb-md headline-tight gradient-shimmer">
             I spot patterns across AI, business, and culture—then I experiment.
           </h1>
           <p className="text-xl opacity-70">Here's what I'm learning.</p>
@@ -54,23 +54,17 @@ export default function Home() {
             {/* Intro to AI - Featured Card */}
             <a 
               href="/resources/explainers" 
-              className="card-featured card-interactive"
+              className="card-featured card-interactive card-featured-flex"
               aria-label="Learn AI fundamentals"
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-                minHeight: '350px'
-              }}
             >
               <div>
                 <div className="text-5xl mb-md" aria-hidden="true">🎓</div>
                 <h3 className="text-3xl font-bold mb-md">Intro to AI</h3>
-                <p className="text-xl opacity-70" style={{lineHeight: '1.6'}}>
+                <p className="text-xl opacity-70 line-height-snug">
                   For the 48% who don't know where to start. Clear, practical guidance.
                 </p>
               </div>
-              <div className="text-lg font-semibold mt-lg pt-md border-top" style={{borderColor: 'rgba(255,255,255,0.2)'}}>
+              <div className="text-lg font-semibold mt-lg pt-md border-top-translucent">
                 Start learning →
               </div>
             </a>
@@ -78,7 +72,7 @@ export default function Home() {
             {/* Prompt Library */}
             <a 
               href="/resources/prompts" 
-              className="card card-interactive"
+              className="card card-interactive card-hover-lift"
               aria-label="Get AI prompts"
             >
               <div className="text-4xl mb-sm" aria-hidden="true">💬</div>
@@ -90,7 +84,7 @@ export default function Home() {
             {/* Context Template */}
             <a 
               href="/resources/context-template" 
-              className="card card-interactive"
+              className="card card-interactive card-hover-lift"
               aria-label="Download context template"
             >
               <div className="text-4xl mb-sm" aria-hidden="true">📄</div>
@@ -106,7 +100,7 @@ export default function Home() {
           <div className="grid grid-3 gap-md mb-xl">
             <a 
               href="/blog/5-problems" 
-              className="card card-interactive"
+              className="card card-interactive card-hover-lift"
               data-analytics="blog-5-problems-click"
             >
               <div className="media-container media-container-16-9 mb-md">
@@ -123,7 +117,7 @@ export default function Home() {
 
             <a 
               href="/blog/enterprise-ai" 
-              className="card card-interactive"
+              className="card card-interactive card-hover-lift"
             >
               <div className="media-container media-container-16-9 mb-md">
                 <div className="media-placeholder">Featured image</div>
@@ -139,8 +133,7 @@ export default function Home() {
 
             <a 
               href="/blog" 
-              className="card card-interactive flex items-center justify-center"
-              style={{minHeight: '300px'}}
+              className="card card-interactive card-hover-lift flex items-center justify-center min-h-300"
             >
               <div className="text-xl font-semibold">View all posts →</div>
             </a>
@@ -153,7 +146,7 @@ export default function Home() {
           </p>
           
           <div className="grid grid-3 gap-md">
-            <div className="card">
+            <div className="card card-hover-lift">
               <div className="media-container media-container-16-9 mb-md">
                 <div className="media-placeholder">Screenshot</div>
               </div>
@@ -163,7 +156,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="card">
+            <div className="card card-hover-lift">
               <div className="media-container media-container-16-9 mb-md">
                 <div className="media-placeholder">Screenshot</div>
               </div>
@@ -173,7 +166,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="card">
+            <div className="card card-hover-lift">
               <div className="media-container media-container-16-9 mb-md">
                 <div className="media-placeholder">Newsletter preview</div>
               </div>
@@ -187,7 +180,7 @@ export default function Home() {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="section bg-gradient text-center">
+      <section className="section bg-gradient text-center newsletter-glow">
         <div className="container container-md">
           <h2 className="text-4xl font-bold mb-md">📰 The Daily AI</h2>
           <p className="text-xl mb-lg opacity-70">
@@ -197,8 +190,7 @@ export default function Home() {
           <form 
             action="#" 
             method="POST"
-            className="form mx-auto"
-            style={{maxWidth: '500px', justifyContent: 'center'}}
+            className="form form-center mx-auto max-w-500"
             aria-label="Subscribe to newsletter"
           >
             <input 
@@ -206,18 +198,13 @@ export default function Home() {
               name="email"
               placeholder="Your email"
               required
-              className="form-input"
+              className="form-input form-input-glow"
               aria-label="Email address"
             />
             <button 
               type="submit"
-              className="btn btn-lg"
+              className="btn btn-lg btn-newsletter"
               data-analytics="newsletter-signup"
-              style={{
-                background: '#000000',
-                color: 'white',
-                border: 'none'
-              }}
             >
               Join the Waitlist
             </button>
