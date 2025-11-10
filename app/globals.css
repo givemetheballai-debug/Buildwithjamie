@@ -102,6 +102,11 @@ body {
 .text-cyan { color: var(--accent-cyan); }
 .text-pink { color: var(--accent-pink); }
 
+/* Text colors for resource pages */
+.text-primary { color: #2d3748; }
+.text-secondary { color: #4a5568; }
+.text-tertiary { color: #718096; }
+
 /* ============================================
    LAYOUT
    ============================================ */
@@ -170,6 +175,11 @@ body {
 .pt-md { padding-top: var(--space-md); }
 
 .mx-auto { margin-left: auto; margin-right: auto; }
+
+/* Additional spacing utilities */
+.m-0 { margin: 0; }
+.mb-xs { margin-bottom: var(--space-xs); }
+.mr-md { margin-right: var(--space-md); }
 
 /* ============================================
    CARDS - FIXED FOR LAYOUT
@@ -348,6 +358,71 @@ body {
 .rounded-lg { border-radius: var(--radius-lg); }
 .bg-gradient { background: var(--accent-gradient); }
 .no-underline { text-decoration: none; }
+
+/* ============================================
+   ADDITIONAL UTILITIES FOR RESOURCE PAGES
+   ============================================ */
+
+/* Max Width Utilities */
+.max-w-500 { max-width: 500px; }
+.max-w-700 { max-width: 700px; }
+
+/* Display Utilities */
+.hidden { display: none; }
+
+/* Font Utilities */
+.font-mono { font-family: monospace; }
+.underline { text-decoration: underline; }
+
+/* Border Utilities */
+.border-left-warning { border-left: 4px solid #ff6b6b; }
+
+/* Button Variants */
+.btn-inverse {
+  background: white;
+  color: var(--accent-cyan);
+  font-size: 1.1rem;
+}
+
+.btn-inverse:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.btn-outline-white {
+  border: 2px solid white;
+  color: white;
+  background: transparent;
+}
+
+.btn-outline-white:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-shadow {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn-copy {
+  width: 100%;
+  padding: 0.65rem 1rem;
+  font-size: 0.9rem;
+  background: var(--accent-gradient);
+  color: white;
+}
+
+.btn-copied {
+  background: #48bb78 !important;
+}
+
+/* Form Utilities */
+.form-center {
+  justify-content: center;
+}
+
+/* Background Utilities */
+.bg-light {
+  background: #f7fafc;
+}
 
 /* ============================================
    MOBILE
@@ -632,6 +707,124 @@ body {
   .example-grid {
     grid-template-columns: 1fr;
   }
+  
+  .prompt-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tool-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .p-xl {
+    padding: 2rem;
+  }
+  
+  .comparison-table-wrapper {
+    padding: 1rem;
+  }
+}
+
+/* ============================================
+   TOOL COMPARISON STYLES
+   ============================================ */
+.tool-comparison-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.comparison-table-wrapper {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-header {
+  background: var(--accent-gradient);
+  color: white;
+}
+
+.table-cell-header {
+  padding: 1.5rem;
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+.table-row {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.table-row-last {
+  /* No border on last row */
+}
+
+.table-cell {
+  padding: 1.5rem;
+  color: #4a5568;
+}
+
+.table-cell-bold {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+/* ============================================
+   PROMPT LIBRARY STYLES
+   ============================================ */
+.prompt-library-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.prompt-category-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--accent-cyan);
+}
+
+.prompt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1rem;
+}
+
+.prompt-card {
+  background: white;
+  padding: 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.prompt-card-title {
+  font-size: 1rem;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.prompt-card-text {
+  font-size: 0.9rem;
+  color: #4a5568;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+  font-family: monospace;
+  background: #f7fafc;
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
 }
 
 /* ============================================
