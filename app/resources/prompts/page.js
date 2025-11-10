@@ -152,7 +152,7 @@ export default function PromptLibrary() {
   }
 
   const categories = [
-    { id: 'writing', name: 'Writing & Content', icon: '✍️', description: 'Emails, posts, editing, and content creation' },
+    { id: 'writing', name: 'Writing & Content', icon: '✏️', description: 'Emails, posts, editing, and content creation' },
     { id: 'productivity', name: 'Productivity & Planning', icon: '📋', description: 'Task management, scheduling, and organization' },
     { id: 'career', name: 'Career Development', icon: '💼', description: 'Resumes, interviews, networking, and growth' },
     { id: 'strategy', name: 'Strategy & Analysis', icon: '📊', description: 'Business planning, data analysis, and decisions' },
@@ -172,25 +172,25 @@ export default function PromptLibrary() {
       {/* Intro */}
       <section className="section-sm bg-primary border-bottom text-center">
         <div className="resource-wrapper">
-          <p className="text-lg mb-md" style={{color: '#4a5568', lineHeight: '1.8'}}>
+          <p className="text-lg mb-md text-secondary line-height-relaxed">
             These are the prompts I use daily after 6 months of heavy AI usage. They're specific, tested, and save me hours each week.
           </p>
-          <p className="text-base" style={{color: '#718096'}}>
+          <p className="text-base text-tertiary">
             Click any prompt to copy it. Then paste into ChatGPT, Claude, or Gemini and fill in the brackets.
           </p>
         </div>
       </section>
 
       {/* Tips Section */}
-      <section style={{padding: '2rem 2rem 1rem 2rem', background: '#f7fafc'}}>
+      <section className="section-sm bg-light">
         <div className="resource-wrapper">
-          <h2 className="text-3xl font-bold mb-md text-center" style={{color: '#2d3748'}}>
+          <h2 className="text-3xl font-bold mb-md text-center text-primary">
             How to Use These Prompts
           </h2>
           
           <div className="tool-grid">
             <div className="tool-item">
-              <h3 className="text-xl mb-sm" style={{color: '#2d3748'}}>
+              <h3 className="text-xl mb-sm text-primary">
                 1. Fill in the Brackets
               </h3>
               <p>
@@ -199,7 +199,7 @@ export default function PromptLibrary() {
             </div>
 
             <div className="tool-item">
-              <h3 className="text-xl mb-sm" style={{color: '#2d3748'}}>
+              <h3 className="text-xl mb-sm text-primary">
                 2. Iterate
               </h3>
               <p>
@@ -208,7 +208,7 @@ export default function PromptLibrary() {
             </div>
 
             <div className="tool-item">
-              <h3 className="text-xl mb-sm" style={{color: '#2d3748'}}>
+              <h3 className="text-xl mb-sm text-primary">
                 3. Add Context
               </h3>
               <p>
@@ -220,72 +220,34 @@ export default function PromptLibrary() {
       </section>
 
       {/* Prompts by Category */}
-      <section style={{padding: '1.5rem 2rem 3rem 2rem', background: '#f7fafc'}}>
-        <div style={{maxWidth: '1100px', margin: '0 auto'}}>
+      <section className="section bg-light">
+        <div className="prompt-library-container">
           {categories.map((category) => (
             <div key={category.id} className="mb-lg">
               {/* Category Header */}
-              <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                marginBottom: '1rem',
-                paddingBottom: '0.5rem',
-                borderBottom: '3px solid var(--accent-cyan)'
-              }}>
-                <div className="text-4xl" style={{marginRight: '1rem'}}>{category.icon}</div>
+              <div className="prompt-category-header">
+                <div className="text-4xl mr-md">{category.icon}</div>
                 <div>
-                  <h2 className="text-3xl font-bold mb-xs" style={{color: '#2d3748'}}>
+                  <h2 className="text-3xl font-bold mb-xs text-primary">
                     {category.name}
                   </h2>
-                  <p style={{color: '#718096', fontSize: '0.95rem'}}>{category.description}</p>
+                  <p className="text-tertiary text-sm">{category.description}</p>
                 </div>
               </div>
 
               {/* Prompts Grid */}
-              <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
-                gap: '1rem'
-              }}>
+              <div className="prompt-grid">
                 {prompts[category.id].map((prompt) => (
-                  <div key={prompt.id} style={{
-                    background: 'white',
-                    padding: '1.25rem',
-                    borderRadius: '8px',
-                    boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
-                    border: '1px solid #e2e8f0'
-                  }}>
-                    <h3 style={{
-                      fontSize: '1rem',
-                      color: '#2d3748',
-                      marginBottom: '0.5rem',
-                      fontWeight: '600'
-                    }}>
+                  <div key={prompt.id} className="prompt-card">
+                    <h3 className="prompt-card-title">
                       {prompt.title}
                     </h3>
-                    <p style={{
-                      fontSize: '0.9rem',
-                      color: '#4a5568',
-                      lineHeight: '1.5',
-                      marginBottom: '0.75rem',
-                      fontFamily: 'monospace',
-                      background: '#f7fafc',
-                      padding: '0.75rem',
-                      borderRadius: '4px',
-                      border: '1px solid #e2e8f0'
-                    }}>
+                    <p className="prompt-card-text">
                       {prompt.prompt}
                     </p>
                     <button
                       onClick={() => copyToClipboard(prompt.prompt, prompt.id)}
-                      className="btn"
-                      style={{
-                        width: '100%',
-                        padding: '0.65rem 1rem',
-                        fontSize: '0.9rem',
-                        background: copiedPrompt === prompt.id ? '#48bb78' : 'var(--accent-gradient)',
-                        color: 'white'
-                      }}
+                      className={`btn btn-copy ${copiedPrompt === prompt.id ? 'btn-copied' : ''}`}
                     >
                       {copiedPrompt === prompt.id ? '✓ Copied!' : '📋 Copy Prompt'}
                     </button>
