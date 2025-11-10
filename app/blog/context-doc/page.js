@@ -21,11 +21,11 @@ export default function ContextDoc() {
       <article className="article-content">
         <div className="article-wrapper">
           
-          <p style={{fontSize: '1.2rem', marginBottom: '2rem'}}>
+          <p className="article-intro">
             I've been a heavy AI user for six months. Hundreds of sessions across ChatGPT, Claude, and Gemini. Built multiple product concepts. Broke every tool at least once (sorry, AI overlords).
           </p>
 
-          <p style={{fontSize: '1.2rem', fontWeight: 600, marginBottom: '3rem'}}>
+          <p className="article-intro-bold">
             And somewhere along the way, I accidentally reinvented RAG.
           </p>
 
@@ -127,7 +127,7 @@ export default function ContextDoc() {
             <p>
               Then I learned what RAG actually was.
             </p>
-            <p style={{fontWeight: 600}}>
+            <p className="article-emphasis">
               Turns out I'd been building enterprise AI architecture in my free time.
             </p>
             <p>
@@ -175,7 +175,7 @@ export default function ContextDoc() {
               <li>Specific formats or outputs you want</li>
             </ul>
 
-            <p style={{marginTop: '2rem'}}>
+            <p className="mt-lg">
               Keep it updated. As your projects change, update the doc. As you learn new things about what works, add them.
             </p>
           </section>
@@ -191,7 +191,7 @@ export default function ContextDoc() {
             <p>
               You don't need courses. You don't need certifications.
             </p>
-            <p style={{fontWeight: 600}}>
+            <p className="article-emphasis">
               You need to use AI until it breaks, then figure out how to make it not break.
             </p>
             <p>
