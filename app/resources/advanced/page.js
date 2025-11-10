@@ -17,8 +17,8 @@ export default function AdvancedTechniques() {
         <div className="resource-wrapper">
           
           {/* Intro */}
-          <div className="text-center" style={{marginBottom: '4rem'}}>
-            <p className="text-lg" style={{color: '#4a5568', lineHeight: '1.8'}}>
+          <div className="text-center mb-xl">
+            <p className="text-lg text-secondary line-height-relaxed">
               These techniques take you beyond basic prompting. Use them when you need deeper analysis, 
               multiple perspectives, or structured workflows that integrate with other tools.
             </p>
@@ -26,9 +26,9 @@ export default function AdvancedTechniques() {
 
           {/* Chain of Thought */}
           <div className="resource-card">
-            <div style={{display: 'flex', alignItems: 'center', marginBottom: '1.5rem'}}>
-              <div className="text-5xl" style={{marginRight: '1rem'}}>🔄</div>
-              <h2 style={{margin: 0}}>Chain of Thought Prompting</h2>
+            <div className="flex items-center mb-lg">
+              <div className="text-5xl mr-md">🔄</div>
+              <h2 className="m-0">Chain of Thought Prompting</h2>
             </div>
             
             <p>
@@ -51,8 +51,8 @@ export default function AdvancedTechniques() {
             </p>
 
             <div className="example-box">
-              <h4 style={{color: 'var(--accent-cyan)', marginBottom: '1rem'}}>Example Prompt:</h4>
-              <p style={{fontFamily: 'monospace', lineHeight: '1.8', margin: 0}}>
+              <h4 className="text-cyan mb-md">Example Prompt:</h4>
+              <p className="font-mono line-height-relaxed m-0">
                 I need to decide whether to build this feature in-house or buy a third-party solution. 
                 Walk me through your reasoning step by step. Consider: cost, timeline, maintenance, 
                 customization needs, and team capacity. Show your work.
@@ -62,9 +62,9 @@ export default function AdvancedTechniques() {
 
           {/* Role Playing */}
           <div className="resource-card">
-            <div style={{display: 'flex', alignItems: 'center', marginBottom: '1.5rem'}}>
-              <div className="text-5xl" style={{marginRight: '1rem'}}>🎭</div>
-              <h2 style={{margin: 0}}>Role Playing</h2>
+            <div className="flex items-center mb-lg">
+              <div className="text-5xl mr-md">🎭</div>
+              <h2 className="m-0">Role Playing</h2>
             </div>
             
             <p>
@@ -90,8 +90,8 @@ export default function AdvancedTechniques() {
             </ul>
 
             <div className="example-box">
-              <h4 style={{color: 'var(--accent-cyan)', marginBottom: '1rem'}}>Example Prompt:</h4>
-              <p style={{fontFamily: 'monospace', lineHeight: '1.8', margin: 0}}>
+              <h4 className="text-cyan mb-md">Example Prompt:</h4>
+              <p className="font-mono line-height-relaxed m-0">
                 Act as a skeptical board member. I'm presenting this strategy: [paste your plan]. 
                 Ask me the hard questions an experienced executive would ask. Push back on weak spots. 
                 Make me defend every assumption.
@@ -101,9 +101,9 @@ export default function AdvancedTechniques() {
 
           {/* Multi-Perspective Analysis */}
           <div className="resource-card">
-            <div style={{display: 'flex', alignItems: 'center', marginBottom: '1.5rem'}}>
-              <div className="text-5xl" style={{marginRight: '1rem'}}>🔍</div>
-              <h2 style={{margin: 0}}>Multi-Perspective Analysis</h2>
+            <div className="flex items-center mb-lg">
+              <div className="text-5xl mr-md">🔍</div>
+              <h2 className="m-0">Multi-Perspective Analysis</h2>
             </div>
             
             <p>
@@ -126,8 +126,8 @@ export default function AdvancedTechniques() {
             </p>
 
             <div className="example-box">
-              <h4 style={{color: 'var(--accent-cyan)', marginBottom: '1rem'}}>Example Prompt:</h4>
-              <p style={{fontFamily: 'monospace', lineHeight: '1.8', margin: 0}}>
+              <h4 className="text-cyan mb-md">Example Prompt:</h4>
+              <p className="font-mono line-height-relaxed m-0">
                 Analyze this product decision from three perspectives:<br/>
                 1. Engineering: technical complexity, maintainability, tech debt<br/>
                 2. Business: revenue impact, market position, competitive advantage<br/>
@@ -140,9 +140,9 @@ export default function AdvancedTechniques() {
 
           {/* Structured Outputs */}
           <div className="resource-card">
-            <div style={{display: 'flex', alignItems: 'center', marginBottom: '1.5rem'}}>
-              <div className="text-5xl" style={{marginRight: '1rem'}}>📊</div>
-              <h2 style={{margin: 0}}>Structured Outputs</h2>
+            <div className="flex items-center mb-lg">
+              <div className="text-5xl mr-md">📊</div>
+              <h2 className="m-0">Structured Outputs</h2>
             </div>
             
             <p>
@@ -167,8 +167,8 @@ export default function AdvancedTechniques() {
             </ul>
 
             <div className="example-box">
-              <h4 style={{color: 'var(--accent-cyan)', marginBottom: '1rem'}}>Example Prompt:</h4>
-              <p style={{fontFamily: 'monospace', lineHeight: '1.8', margin: 0}}>
+              <h4 className="text-cyan mb-md">Example Prompt:</h4>
+              <p className="font-mono line-height-relaxed m-0">
                 Extract key information from this sales call transcript and return as JSON with this structure:<br/>
                 {'{'}<br/>
                 &nbsp;&nbsp;"customer_name": "",<br/>
@@ -213,7 +213,7 @@ export default function AdvancedTechniques() {
           </div>
 
           {/* When Not to Use Advanced Techniques */}
-          <div className="resource-card" style={{borderLeft: '4px solid #ff6b6b'}}>
+          <div className="resource-card border-left-warning">
             <h2>When NOT to Use These</h2>
             <p>
               Advanced techniques add complexity and use more tokens. Use them strategically:
@@ -243,11 +243,11 @@ export default function AdvancedTechniques() {
             <p className="text-lg mb-lg opacity-70">
               Check out the prompt library for ready-to-use templates, or download the context template to supercharge your AI sessions.
             </p>
-            <div style={{display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap'}}>
-              <Link href="/resources/prompts" className="btn btn-lg no-underline" style={{background: 'white', color: '#00f2ea'}}>
+            <div className="flex gap-md justify-center flex-wrap">
+              <Link href="/resources/prompts" className="btn btn-lg btn-inverse no-underline">
                 Browse Prompts
               </Link>
-              <Link href="/resources/context-template" className="btn btn-lg btn-outline no-underline" style={{borderColor: 'white', color: 'white'}}>
+              <Link href="/resources/context-template" className="btn btn-lg btn-outline-white no-underline">
                 Get Template
               </Link>
             </div>
