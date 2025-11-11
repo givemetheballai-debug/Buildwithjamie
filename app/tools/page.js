@@ -135,9 +135,12 @@ Make it memorable and impactful. Provide multiple options if appropriate.`
       return
     }
 
-    // Save current prompt to history if one exists
+    // Save current prompt to history if one exists (keep only 5 most recent)
     if (generatedPrompt && showOutput) {
-      setPromptHistory(prev => [{ prompt: generatedPrompt, taskType: taskTypes[currentTask].name, timestamp: Date.now() }, ...prev])
+      setPromptHistory(prev => [
+        { prompt: generatedPrompt, taskType: taskTypes[currentTask].name, timestamp: Date.now() }, 
+        ...prev
+      ].slice(0, 5))
     }
 
     const prompt = task.template(formData)
@@ -163,10 +166,13 @@ Make it memorable and impactful. Provide multiple options if appropriate.`
   }
 
   const newPrompt = () => {
-    // Save current prompt to history before starting new one
+    // Save current prompt to history before starting new one (keep only 5 most recent)
     if (generatedPrompt) {
       const currentTaskType = taskTypes[currentTask]?.name || 'Unknown'
-      setPromptHistory(prev => [{ prompt: generatedPrompt, taskType: currentTaskType, timestamp: Date.now() }, ...prev])
+      setPromptHistory(prev => [
+        { prompt: generatedPrompt, taskType: currentTaskType, timestamp: Date.now() }, 
+        ...prev
+      ].slice(0, 5))
     }
     
     setCurrentTask(null)
@@ -177,27 +183,29 @@ Make it memorable and impactful. Provide multiple options if appropriate.`
 
   return (
     <div className="prompt-builder">
-      {/* Instructions */}
-      <div className="card mb-lg instructions-card">
-        <h3 className="text-2xl font-bold mb-md">How It Works</h3>
-        <ol className="instructions-list">
-          <li><strong>Choose</strong> your task type (Writing, Research, Coding, etc.)</li>
-          <li><strong>Fill in</strong> the fields with your specific details</li>
-          <li><strong>Generate</strong> a complete, well-structured prompt</li>
-          <li><strong>Copy</strong> and paste into ChatGPT, Claude, or any AI tool</li>
-        </ol>
-        <p className="text-sm opacity-70 mt-md">Your prompts are saved below so you never lose your work. 💾</p>
-      </div>
-
-      {/* Tips Section */}
-      <div className="card mb-lg tip-card">
-        <h3 className="text-xl font-bold mb-sm text-cyan">💡 Pro Tip</h3>
-        <p className="opacity-70">{currentTip}</p>
+      {/* Instructions + Tips Combined */}
+      <div className="card mb-md instructions-card">
+        <div className="grid grid-2 gap-md">
+          <div>
+            <h3 className="text-xl font-bold mb-sm">How It Works</h3>
+            <ol className="instructions-list-compact">
+              <li><strong>Choose</strong> your task type</li>
+              <li><strong>Fill in</strong> the details</li>
+              <li><strong>Generate</strong> your prompt</li>
+              <li><strong>Copy</strong> and use it</li>
+            </ol>
+          </div>
+          <div>
+            <h3 className="text-xl font-bold mb-sm text-cyan">💡 Pro Tip</h3>
+            <p className="text-sm opacity-70">{currentTip}</p>
+          </div>
+        </div>
+        <p className="text-xs opacity-70 mt-md pt-md border-top-translucent">Your last 5 prompts auto-save below 💾</p>
       </div>
 
       {/* Task Selection */}
-      <h3 className="text-2xl font-bold mb-md">Choose Your Task Type</h3>
-      <div className="task-buttons-row mb-lg">
+      <h3 className="text-xl font-bold mb-sm">Choose Your Task Type</h3>
+      <div className="task-buttons-row mb-md">
         {Object.keys(taskTypes).map(key => (
           <button
             key={key}
@@ -211,10 +219,10 @@ Make it memorable and impactful. Provide multiple options if appropriate.`
 
       {/* Form */}
       {currentTask && !showOutput && (
-        <div className="card mb-lg">
+        <div className="card mb-md">
           {taskTypes[currentTask].fields.map(field => (
-            <div key={field.id} className="mb-md">
-              <label className="block mb-sm font-semibold text-cyan">
+            <div key={field.id} className="mb-sm">
+              <label className="block mb-xs font-semibold text-cyan text-sm">
                 {field.label}
               </label>
               {field.type === 'select' ? (
@@ -251,8 +259,8 @@ Make it memorable and impactful. Provide multiple options if appropriate.`
 
       {/* Output */}
       {showOutput && (
-        <div className="card mb-lg output-card">
-          <div className="flex justify-between items-center mb-md">
+        <div className="card mb-md output-card">
+          <div className="flex justify-between items-center mb-sm">
             <h3 className="text-2xl font-bold text-cyan">Your Generated Prompt</h3>
             <div className="flex gap-sm">
               <button 
@@ -321,14 +329,18 @@ export default function Tools() {
       {/* Hero */}
       <section className="section-hero text-center bg-gradient">
         <div className="container">
-          <h1 className="text-5xl font-bold mb-md">⚡ Prompt Builder</h1>
-          <p className="text-xl opacity-70">Build better prompts, get better results</p>
+          <h1 className="text-5xl font-bold mb-sm">Tools</h1>
+          <p className="text-xl opacity-70">Interactive tools to help you work smarter with AI</p>
         </div>
       </section>
 
       {/* Prompt Builder Tool */}
       <section className="section bg-secondary">
         <div className="container container-lg">
+          <div className="flex items-center gap-sm mb-md">
+            <h2 className="text-4xl font-bold">⚡ Prompt Builder</h2>
+            <span className="badge badge-live">FEATURED</span>
+          </div>
           <PromptBuilder />
         </div>
       </section>
