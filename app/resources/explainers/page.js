@@ -114,10 +114,10 @@ export default function IntroToAI() {
             <div className="example-box mt-lg">
               <p className="font-semibold mb-sm">Want more prompt examples?</p>
               <div className="flex gap-sm flex-wrap">
-                <Link href="/resources/prompts" className="btn btn-outline no-underline">
+                <Link href="/resources/prompts" className="btn btn-gradient no-underline">
                   Browse Prompt Library
                 </Link>
-                <Link href="/tools" className="btn btn-outline no-underline">
+                <Link href="/tools" className="btn btn-gradient no-underline">
                   Build Custom Prompts
                 </Link>
               </div>
