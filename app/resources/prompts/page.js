@@ -222,7 +222,7 @@ export default function PromptLibrary() {
             <p className="text-base text-secondary mb-sm">
               Need a custom prompt for something specific?
             </p>
-            <Link href="/tools" className="btn btn-outline no-underline">
+            <Link href="/tools" className="btn btn-gradient no-underline">
               ⚡ Try the Prompt Builder
             </Link>
           </div>
