@@ -11,6 +11,7 @@ function PromptBuilder() {
   const [generatedPrompt, setGeneratedPrompt] = useState('')
   const [showOutput, setShowOutput] = useState(false)
   const [copied, setCopied] = useState(false)
+  const [promptHistory, setPromptHistory] = useState([])
 
   const taskTypes = {
     writing: {
@@ -134,6 +135,11 @@ Make it memorable and impactful. Provide multiple options if appropriate.`
       return
     }
 
+    // Save current prompt to history if one exists
+    if (generatedPrompt && showOutput) {
+      setPromptHistory(prev => [{ prompt: generatedPrompt, taskType: taskTypes[currentTask].name, timestamp: Date.now() }, ...prev])
+    }
+
     const prompt = task.template(formData)
     setGeneratedPrompt(prompt)
     setShowOutput(true)
@@ -145,7 +151,24 @@ Make it memorable and impactful. Provide multiple options if appropriate.`
     setTimeout(() => setCopied(false), 2000)
   }
 
+  const copyHistoryPrompt = (promptText, index) => {
+    navigator.clipboard.writeText(promptText)
+    // Could add visual feedback here if needed
+  }
+
+  const clearHistory = () => {
+    if (confirm('Clear all saved prompts?')) {
+      setPromptHistory([])
+    }
+  }
+
   const newPrompt = () => {
+    // Save current prompt to history before starting new one
+    if (generatedPrompt) {
+      const currentTaskType = taskTypes[currentTask]?.name || 'Unknown'
+      setPromptHistory(prev => [{ prompt: generatedPrompt, taskType: currentTaskType, timestamp: Date.now() }, ...prev])
+    }
+    
     setCurrentTask(null)
     setFormData({})
     setShowOutput(false)
@@ -154,28 +177,32 @@ Make it memorable and impactful. Provide multiple options if appropriate.`
 
   return (
     <div className="prompt-builder">
+      {/* Instructions */}
+      <div className="card mb-lg instructions-card">
+        <h3 className="text-2xl font-bold mb-md">How It Works</h3>
+        <ol className="instructions-list">
+          <li><strong>Choose</strong> your task type (Writing, Research, Coding, etc.)</li>
+          <li><strong>Fill in</strong> the fields with your specific details</li>
+          <li><strong>Generate</strong> a complete, well-structured prompt</li>
+          <li><strong>Copy</strong> and paste into ChatGPT, Claude, or any AI tool</li>
+        </ol>
+        <p className="text-sm opacity-70 mt-md">Your prompts are saved below so you never lose your work. 💾</p>
+      </div>
+
       {/* Tips Section */}
-      <div className="card mb-lg" style={{ 
-        background: 'rgba(0, 255, 255, 0.05)', 
-        border: '1px solid rgba(0, 255, 255, 0.2)' 
-      }}>
-        <h3 className="text-xl font-bold mb-sm" style={{ color: '#00ffff' }}>💡 Pro Tip</h3>
+      <div className="card mb-lg tip-card">
+        <h3 className="text-xl font-bold mb-sm text-cyan">💡 Pro Tip</h3>
         <p className="opacity-70">{currentTip}</p>
       </div>
 
       {/* Task Selection */}
       <h3 className="text-2xl font-bold mb-md">Choose Your Task Type</h3>
-      <div className="grid grid-5 gap-md mb-lg">
+      <div className="task-buttons-row mb-lg">
         {Object.keys(taskTypes).map(key => (
           <button
             key={key}
             onClick={() => selectTask(key)}
-            className={`card card-interactive text-center ${currentTask === key ? 'card-active' : ''}`}
-            style={{
-              padding: '1.5rem',
-              background: currentTask === key ? 'linear-gradient(135deg, rgba(0, 255, 255, 0.2), rgba(255, 0, 255, 0.2))' : undefined,
-              borderColor: currentTask === key ? '#00ffff' : undefined
-            }}
+            className={`card card-interactive text-center task-btn ${currentTask === key ? 'card-active' : ''}`}
           >
             <div className="font-bold">{taskTypes[key].name}</div>
           </button>
@@ -187,21 +214,14 @@ Make it memorable and impactful. Provide multiple options if appropriate.`
         <div className="card mb-lg">
           {taskTypes[currentTask].fields.map(field => (
             <div key={field.id} className="mb-md">
-              <label className="block mb-sm font-semibold" style={{ color: '#00ffff' }}>
+              <label className="block mb-sm font-semibold text-cyan">
                 {field.label}
               </label>
               {field.type === 'select' ? (
                 <select
                   value={formData[field.id] || ''}
                   onChange={(e) => handleInputChange(field.id, e.target.value)}
-                  className="form-input w-full"
-                  style={{
-                    background: 'rgba(0, 0, 0, 0.5)',
-                    border: '2px solid rgba(255, 255, 255, 0.2)',
-                    borderRadius: '8px',
-                    padding: '12px',
-                    color: '#fff'
-                  }}
+                  className="form-input w-full prompt-form-input"
                 >
                   <option value="">Select...</option>
                   {field.options.map(opt => (
@@ -214,14 +234,7 @@ Make it memorable and impactful. Provide multiple options if appropriate.`
                   value={formData[field.id] || ''}
                   onChange={(e) => handleInputChange(field.id, e.target.value)}
                   placeholder={field.placeholder}
-                  className="form-input w-full"
-                  style={{
-                    background: 'rgba(0, 0, 0, 0.5)',
-                    border: '2px solid rgba(255, 255, 255, 0.2)',
-                    borderRadius: '8px',
-                    padding: '12px',
-                    color: '#fff'
-                  }}
+                  className="form-input w-full prompt-form-input"
                 />
               )}
             </div>
@@ -229,12 +242,7 @@ Make it memorable and impactful. Provide multiple options if appropriate.`
           
           <button 
             onClick={generatePrompt}
-            className="btn btn-lg w-full"
-            style={{
-              background: 'linear-gradient(135deg, #00ffff, #ff00ff)',
-              color: '#000',
-              fontWeight: 700
-            }}
+            className="btn btn-lg w-full btn-generate"
           >
             Generate Prompt
           </button>
@@ -243,48 +251,61 @@ Make it memorable and impactful. Provide multiple options if appropriate.`
 
       {/* Output */}
       {showOutput && (
-        <div className="card mb-lg" style={{
-          background: 'rgba(0, 0, 0, 0.8)',
-          border: '2px solid #00ffff'
-        }}>
+        <div className="card mb-lg output-card">
           <div className="flex justify-between items-center mb-md">
-            <h3 className="text-2xl font-bold" style={{ color: '#00ffff' }}>Your Generated Prompt</h3>
+            <h3 className="text-2xl font-bold text-cyan">Your Generated Prompt</h3>
             <div className="flex gap-sm">
               <button 
                 onClick={copyPrompt}
-                className="btn btn-sm"
-                style={{
-                  background: copied ? 'rgba(0, 255, 0, 0.2)' : 'rgba(255, 255, 255, 0.1)',
-                  borderColor: copied ? '#00ff00' : 'rgba(255, 255, 255, 0.3)'
-                }}
+                className={`btn btn-sm ${copied ? 'btn-copied' : 'btn-secondary'}`}
               >
                 {copied ? '✓ Copied!' : '📋 Copy'}
               </button>
               <button 
                 onClick={newPrompt}
-                className="btn btn-sm"
-                style={{
-                  background: 'rgba(255, 255, 255, 0.1)',
-                  borderColor: 'rgba(255, 255, 255, 0.3)'
-                }}
+                className="btn btn-sm btn-secondary"
               >
                 ✨ New Prompt
               </button>
             </div>
           </div>
           
-          <pre style={{
-            background: 'rgba(0, 0, 0, 0.5)',
-            border: '1px solid rgba(255, 255, 255, 0.1)',
-            borderRadius: '8px',
-            padding: '1.5rem',
-            whiteSpace: 'pre-wrap',
-            fontFamily: 'monospace',
-            color: '#ccc',
-            lineHeight: 1.8
-          }}>
+          <pre className="prompt-output">
             {generatedPrompt}
           </pre>
+        </div>
+      )}
+
+      {/* Prompt History */}
+      {promptHistory.length > 0 && (
+        <div className="prompt-history">
+          <div className="flex justify-between items-center mb-md">
+            <h3 className="text-xl font-bold">Previous Prompts</h3>
+            <button 
+              onClick={clearHistory}
+              className="btn btn-sm btn-secondary"
+            >
+              🗑️ Clear All
+            </button>
+          </div>
+          <div className="history-grid">
+            {promptHistory.map((item, index) => (
+              <div key={item.timestamp} className="card history-card">
+                <div className="flex justify-between items-center mb-sm">
+                  <span className="text-sm font-semibold text-cyan">{item.taskType}</span>
+                  <button 
+                    onClick={() => copyHistoryPrompt(item.prompt, index)}
+                    className="btn btn-sm btn-secondary"
+                  >
+                    📋 Copy
+                  </button>
+                </div>
+                <pre className="history-prompt-text">
+                  {item.prompt}
+                </pre>
+              </div>
+            ))}
+          </div>
         </div>
       )}
     </div>
