@@ -1328,6 +1328,33 @@ body {
   padding-bottom: 0.5rem;
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.task-buttons-row::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 60px;
+  background: linear-gradient(to left, var(--bg-secondary), transparent);
+  pointer-events: none;
+}
+
+.mobile-scroll-hint {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-scroll-hint {
+    display: block;
+    text-align: center;
+  }
+  
+  .task-buttons-row::after {
+    width: 40px;
+  }
 }
 
 .task-buttons-row::-webkit-scrollbar {
@@ -1417,6 +1444,34 @@ body {
   border: 2px solid var(--accent-cyan);
 }
 
+.output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.output-actions {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+@media (max-width: 768px) {
+  .output-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  
+  .output-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .output-actions .btn {
+    width: 100%;
+  }
+}
+
 .prompt-output {
   background: rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -1444,6 +1499,24 @@ body {
 .history-card {
   background: rgba(10, 10, 10, 0.8);
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.history-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .history-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .history-card-header .btn {
+    width: 100%;
+  }
 }
 
 .history-prompt-text {
