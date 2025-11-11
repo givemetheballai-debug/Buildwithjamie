@@ -117,9 +117,22 @@ Make it memorable and impactful. Provide multiple options if appropriate.`
   const [currentTip] = useState(tips[Math.floor(Math.random() * tips.length)])
 
   const selectTask = (taskKey) => {
+    // Save current prompt to history before switching tasks
+    if (generatedPrompt && showOutput) {
+      const currentTaskType = taskTypes[currentTask]?.name || 'Unknown'
+      setPromptHistory(prev => [
+        { prompt: generatedPrompt, taskType: currentTaskType, timestamp: Date.now() }, 
+        ...prev
+      ].slice(0, 5))
+    }
+    
     setCurrentTask(taskKey)
     setFormData({})
     setShowOutput(false)
+    
+    // Update active button
+    const buttons = document.querySelectorAll('.task-btn')
+    buttons.forEach(btn => btn.classList.remove('active'))
   }
 
   const handleInputChange = (fieldId, value) => {
@@ -205,6 +218,7 @@ Make it memorable and impactful. Provide multiple options if appropriate.`
 
       {/* Task Selection */}
       <h3 className="text-xl font-bold mb-sm">Choose Your Task Type</h3>
+      <p className="text-sm opacity-70 mb-xs mobile-scroll-hint">← Scroll to see all →</p>
       <div className="task-buttons-row mb-md">
         {Object.keys(taskTypes).map(key => (
           <button
@@ -260,9 +274,9 @@ Make it memorable and impactful. Provide multiple options if appropriate.`
       {/* Output */}
       {showOutput && (
         <div className="card mb-md output-card">
-          <div className="flex justify-between items-center mb-sm">
+          <div className="output-header mb-sm">
             <h3 className="text-2xl font-bold text-cyan">Your Generated Prompt</h3>
-            <div className="flex gap-sm">
+            <div className="output-actions">
               <button 
                 onClick={copyPrompt}
                 className={`btn btn-sm ${copied ? 'btn-copied' : 'btn-secondary'}`}
@@ -299,7 +313,7 @@ Make it memorable and impactful. Provide multiple options if appropriate.`
           <div className="history-grid">
             {promptHistory.map((item, index) => (
               <div key={item.timestamp} className="card history-card">
-                <div className="flex justify-between items-center mb-sm">
+                <div className="history-card-header mb-sm">
                   <span className="text-sm font-semibold text-cyan">{item.taskType}</span>
                   <button 
                     onClick={() => copyHistoryPrompt(item.prompt, index)}
