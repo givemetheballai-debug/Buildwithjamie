@@ -263,6 +263,22 @@ body {
   border-color: var(--accent-cyan);
   color: var(--accent-cyan);
 }
+/* ============================================
+   GRADIENT BUTTON CLASS
+   Add this to your globals.css
+   ============================================ */
+
+.btn-gradient {
+  background: var(--accent-gradient);
+  color: #fff;
+  border: none;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.3);
+  color: #fff;
+}
 
 .form {
   display: flex;
