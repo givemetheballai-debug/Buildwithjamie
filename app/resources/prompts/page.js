@@ -220,10 +220,10 @@ export default function PromptLibrary() {
 
           <div className="text-center mt-lg">
             <p className="text-base text-secondary mb-sm">
-              Need a custom prompt for something specific?
+              Try out the prompts below, or use the custom prompt builder tool:
             </p>
             <Link href="/tools" className="btn btn-gradient no-underline">
-              ⚡ Try the Prompt Builder
+              ⚡ Prompt Builder Tool
             </Link>
           </div>
         </div>
@@ -266,6 +266,19 @@ export default function PromptLibrary() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Bottom CTA */}
+      <section className="section-sm bg-gradient text-center">
+        <div className="container container-md">
+          <h3 className="text-3xl font-bold mb-md">Need a Custom Prompt?</h3>
+          <p className="text-lg mb-lg opacity-70">
+            Use the interactive prompt builder to create tailored prompts for any task.
+          </p>
+          <Link href="/tools" className="btn btn-lg btn-inverse no-underline">
+            ⚡ Try Prompt Builder Tool
+          </Link>
         </div>
       </section>
 
