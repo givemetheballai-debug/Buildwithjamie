@@ -2,6 +2,7 @@
 
 import Navigation from '../../../components/Navigation'
 import Footer from '../../../components/Footer'
+import Link from 'next/link'
 import { useState } from 'react'
 
 export default function PromptLibrary() {
@@ -215,6 +216,15 @@ export default function PromptLibrary() {
                 Upload your context template at the start of sessions for even better, more personalized results.
               </p>
             </div>
+          </div>
+
+          <div className="text-center mt-lg">
+            <p className="text-base text-secondary mb-sm">
+              Need a custom prompt for something specific?
+            </p>
+            <Link href="/tools" className="btn btn-outline no-underline">
+              ⚡ Try the Prompt Builder
+            </Link>
           </div>
         </div>
       </section>
