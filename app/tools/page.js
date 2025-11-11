@@ -217,7 +217,7 @@ Make it memorable and impactful. Provide multiple options if appropriate.`
       </div>
 
       {/* Task Selection */}
-      <h3 className="text-xl font-bold mb-sm">Choose Your Task Type</h3>
+      <h3 className="text-xl font-bold mb-md">Choose Your Task Type</h3>
       <p className="text-sm opacity-70 mb-xs mobile-scroll-hint">← Scroll to see all →</p>
       <div className="task-buttons-row mb-md">
         {Object.keys(taskTypes).map(key => (
