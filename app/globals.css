@@ -1326,6 +1326,7 @@ body {
   gap: 1rem;
   overflow-x: auto;
   padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
   position: relative;
