@@ -110,6 +110,18 @@ export default function IntroToAI() {
               <strong>Power Move:</strong>
               <p>Upload a context document at the start of conversations. Include your background, goals, working style, and current projects. AI quality improves dramatically when it has this foundation.</p>
             </div>
+
+            <div className="example-box mt-lg">
+              <p className="font-semibold mb-sm">Want more prompt examples?</p>
+              <div className="flex gap-sm flex-wrap">
+                <Link href="/resources/prompts" className="btn btn-outline no-underline">
+                  Browse Prompt Library
+                </Link>
+                <Link href="/tools" className="btn btn-outline no-underline">
+                  Build Custom Prompts
+                </Link>
+              </div>
+            </div>
           </div>
 
           {/* Tokens & Memory */}
