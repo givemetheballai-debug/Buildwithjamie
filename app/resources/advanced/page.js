@@ -9,7 +9,7 @@ export default function AdvancedTechniques() {
       
       {/* Hero */}
       <div className="resource-hero">
-        <h1 className="text-5xl font-bold mb-md">Advanced Techniques</h1>
+        <h1 className="text-5xl font-bold mb-md">Intermediate Techniques</h1>
         <p className="text-xl">Once you've mastered the basics, level up your AI game</p>
       </div>
 
