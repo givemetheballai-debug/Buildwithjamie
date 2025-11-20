@@ -15,19 +15,6 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* Filter Tags */}
-      <section className="section-sm bg-secondary">
-        <div className="container">
-          <div className="flex gap-md mb-lg" style={{flexWrap: 'wrap', justifyContent: 'center'}}>
-            <button className="btn btn-outline">All Posts</button>
-            <button className="btn btn-outline">AI Strategy</button>
-            <button className="btn btn-outline">Product Management</button>
-            <button className="btn btn-outline">Practical Tips</button>
-            <button className="btn btn-outline">Marketing</button>
-            <button className="btn btn-outline">Ethics</button>
-          </div>
-        </div>
-      </section>
 
       {/* Article List */}
       <section className="section bg-secondary">
